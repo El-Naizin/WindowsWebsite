@@ -1,5 +1,5 @@
 <script setup>
-import Window from './window.vue'
+import Window from './Window.vue'
 </script>
 
 <template>

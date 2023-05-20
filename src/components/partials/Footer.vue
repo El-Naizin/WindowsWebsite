@@ -1,6 +1,6 @@
 <script>
 
-import StartMenuItem from './start_menu.vue'
+import StartMenuItem from './StartMenu.vue'
 
 
 

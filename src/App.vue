@@ -1,5 +1,5 @@
 <script setup>
-import FooterItem from './components/partials/footer.vue'
+import FooterItem from './components/partials/Footer.vue'
 import MainWindow from './components/MainWindow.vue';
 
 </script>
