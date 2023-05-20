@@ -26,7 +26,7 @@ export default {
       const date = new Date();
       const hours = date.getHours();
       const minutes = date.getMinutes();
-      this.$refs.time.textContent = `${hours}:${minutes}`
+      this.$refs.time.textContent = `${('0'+hours).slice(-2)}:${('0'+minutes).slice(-2)}`
     },
     openDrawer() {
       this.$refs.StartMenuRef.toggleShow();
@@ -79,10 +79,10 @@ export default {
   font-weight: bold;
   font-style: italic;
   background: radial-gradient(circle, #5eac56 0%, #3c873c 100%) center/cover no-repeat;
-  box-shadow: 0px 5px 10px #79ce71 inset, 4px 0 8px #3f8cf3;
+  box-shadow: 0 5px 10px #79ce71 inset, 4px 0 8px #3f8cf3;
   padding: 2px 25px 6px 10px;
   text-shadow: 1px 1px 3px #222;
-  border-radius: 0px 8px 8px 0px;
+  border-radius: 0 8px 8px 0;
   margin-right: 16px;
   cursor: pointer;
 }
@@ -140,7 +140,7 @@ export default {
   font-size: 14px;
   line-height: 14px;
   background: linear-gradient(to bottom, #1290E9 0%, #19B9F3 9%, #1290E9 18%, #1290E9 92%, #1941A5 100%) center/cover no-repeat;
-  box-shadow: 0px 5px 10px #14A5F0 inset, 0px 5px 10px #333333;
+  box-shadow: 0 5px 10px #14A5F0 inset, 0 5px 10px #333333;
   padding: 9px 15px 9px 25px;
   border-left: 1px solid #092E51;
   text-shadow: 1px 1px 2px #222;
