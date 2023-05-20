@@ -1,4 +1,5 @@
 <script setup>
+import Window from './window.vue'
 </script>
 
 <template>
@@ -32,12 +33,10 @@
   </div>
 
   <div class="window">
-    <div class="title-bar">
-      <div class="title-bar-text">FAT 128 LIFE</div>
-      <div class="title-bar-controls">
-        <button aria-label="Close"></button>
-      </div>
-    </div>
+    <Window title="FAT 128 LIFE" help_btn>
+      <p>Mate moi ça, une fenêtre Windows XP quoi !</p>
+      <p>Quoicoubeh eheh</p>
+    </Window>
   </div>
 
 </template>
