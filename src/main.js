@@ -12,6 +12,9 @@ import App from './App.vue'
 
 import './assets/main.css'
 
+// Import XP css
+import "xp.css/dist/XP.css";
+
 const myApp = createApp(App)
 
 myApp.use(Quasar, {
