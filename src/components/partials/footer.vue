@@ -28,10 +28,10 @@ export default {
     <div class="start-button"><img src="../../assets/footer/logo.svg"> start</div>
 
     <div class="opened-tabs">
-      <div class="open-tab" onclick="window.open('https://faisalakhtar.github.io/')"><img src= "../../assets/footer/documents.png"> Faisal Akhtar</div>
-      <div class="open-tab" onclick="window.open('https://github.com/faisalAkhtar/')"><img src="../../assets/footer/computer.png"> My Computer</div>
-      <div class="open-tab" onclick="window.open('https://twitter.com/faisallakhtarr/')"><img src="../../assets/footer/network.png"> My Network</div>
-      <div class="open-tab readme active"><img src="../../assets/footer/notepad.png"> ReadME.txt</div>
+      <a href="#/"><div class="open-tab"><img src= "../../assets/footer/documents.png"> Home </div></a>
+      <a href="#/planning"><div class="open-tab"><img src="../../assets/footer/computer.png"> Planning </div></a>
+      <a><div class="open-tab"><img src="../../assets/footer/network.png"> My Network</div></a>
+      <a><div class="open-tab"><img src="../../assets/footer/notepad.png"> ReadME.txt</div></a>
     </div>
 
     <div ref="time" class="time">{{ currentTime }}</div>
