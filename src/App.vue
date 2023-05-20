@@ -19,6 +19,7 @@ import FooterItem from './components/partials/footer.vue'
     <q-icon name="cloud" />
 
   </main>
+
   <div class="footer">
     <FooterItem>
     </FooterItem>
@@ -55,10 +56,6 @@ header {
   }
 }
 
-.footer {
-  bottom: 0;
-  position: sticky;
-  height: auto;
-}
+
 
 </style>

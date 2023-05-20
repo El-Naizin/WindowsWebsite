@@ -1,4 +1,24 @@
-<script setup>
+<script>
+
+export default {
+  data() {
+    return {
+      currentTime: ''
+    };
+  },
+  mounted() {
+    this.$refs.time.textContent = this.getCurrentTime();
+    setInterval(this.getCurrentTime, 60000);
+  },
+  methods: {
+    getCurrentTime() {
+      const date = new Date();
+      const hours = date.getHours();
+      const minutes = date.getMinutes();
+      return `${hours}:${minutes}`;
+    }
+  }
+};
 
 </script>
 
@@ -13,7 +33,7 @@
       <div class="open-tab readme active"><img src="assets/notepad.png"> ReadME.txt</div>
     </div>
 
-    <div class="time">11:20 PM</div>
+    <div ref="time" class="time">{{ currentTime }}</div>
   </div>
 </template>
 
