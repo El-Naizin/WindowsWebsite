@@ -5,6 +5,9 @@ import MainWindow from './components/MainWindow.vue';
 </script>
 
 <template>
+  <!-- for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <MainWindow></MainWindow>
 
   <div class="footer">
