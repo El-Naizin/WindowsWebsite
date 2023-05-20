@@ -24,13 +24,13 @@ export default {
 
 <template>
   <div class="taskbar">
-    <div class="start-button"><img src="assets/logo.svg"> start</div>
+    <div class="start-button"><img src="../../assets/footer/logo.svg"> start</div>
 
     <div class="opened-tabs">
-      <div class="open-tab" onclick="window.open('https://faisalakhtar.github.io/')"><img src="assets/documents.png"> Faisal Akhtar</div>
-      <div class="open-tab" onclick="window.open('https://github.com/faisalAkhtar/')"><img src="assets/computer.png"> My Computer</div>
-      <div class="open-tab" onclick="window.open('https://twitter.com/faisallakhtarr/')"><img src="assets/network.png"> My Network</div>
-      <div class="open-tab readme active"><img src="assets/notepad.png"> ReadME.txt</div>
+      <div class="open-tab" onclick="window.open('https://faisalakhtar.github.io/')"><img src= "../../assets/footer/documents.png"> Faisal Akhtar</div>
+      <div class="open-tab" onclick="window.open('https://github.com/faisalAkhtar/')"><img src="../../assets/footer/computer.png"> My Computer</div>
+      <div class="open-tab" onclick="window.open('https://twitter.com/faisallakhtarr/')"><img src="../../assets/footer/network.png"> My Network</div>
+      <div class="open-tab readme active"><img src="../../assets/footer/notepad.png"> ReadME.txt</div>
     </div>
 
     <div ref="time" class="time">{{ currentTime }}</div>
@@ -82,7 +82,7 @@ export default {
   margin: 3px 0;
   float: left;
   background-color: #4892F7;
-  background: url(btn1.png) no-repeat 0 0;
+  background: url(../../assets/footer/btn1.png) no-repeat 0 0;
   border: 1px solid #306FD9;
   border-radius: 2px;
   font-family: calibri, monospace;
@@ -97,11 +97,11 @@ export default {
 }
 
 .open-tab:hover {
-  background: url(btn2.png) no-repeat 0 0;
+  background: url(../../assets/footer/btn2.png) no-repeat 0 0;
 }
 
 .open-tab.active {
-  background: url(btn3.png) no-repeat 0 0;
+  background: url(../../assets/footer/btn3.png) no-repeat 0 0;
 }
 
 .open-tab img {
