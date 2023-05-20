@@ -1,18 +1,21 @@
 <script setup>
-import Window from '../Window.vue'
+import Window from '@/components/partials/Window.vue'
 </script>
 
 <script>
 import MarkdownIt from 'markdown-it';
+import fs from "fs";
+var jsonData = "";
 
 export default {
   data() {
     return {
-      markdown: '# Hello, World!'
+      markdown: '# Helo, World!'
     };
   },
   created() {
     this.getMarkdown();
+
   },
   computed: {
     getRenderedMarkdown(){
@@ -21,15 +24,18 @@ export default {
     }
   },
   methods: {
-    getMarkdown() {
-      const md_files = import.meta.glob('@/assets/blog_entry/*.md');
+    async getMarkdown() {
+
+      jsonData = await fetch('/Markdown_Entries/index.json')
+          .then(response => response.json())
+          .then(json => jsonData = json);
+
 
       var fetchPromises = [];
       var md_content = [];
 
-      for (var item in md_files) {
-
-        const fetchPromise = fetch(item)
+      for (var item in jsonData.Entries) {
+        const fetchPromise =  fetch('/Markdown_Entries/' + jsonData.Entries[item].md_filename)
             .then(response => response.text())
             .then(text => md_content.push(text))
 

@@ -1,0 +1,22 @@
+{
+  "Entries": [
+    {
+      "md_filename": "entry_one.md",
+      "tags": [
+        "lorem",
+        "ipsum",
+        "tag1",
+        "tag2"
+      ]
+    },
+    {
+      "md_filename": "entry_two.md",
+      "tags": [
+        "lorem",
+        "ipsum",
+        "tag1",
+        "tag2"
+      ]
+    }
+  ]
+}
