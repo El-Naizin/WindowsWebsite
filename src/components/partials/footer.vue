@@ -50,8 +50,8 @@ export default {
     <div class="opened-tabs">
       <a href="#/"><div class="open-tab"><img src= "../../assets/footer/documents.png"> Home </div></a>
       <a href="#/planning"><div class="open-tab"><img src="../../assets/footer/computer.png"> Planning </div></a>
-      <a><div class="open-tab"><img src="../../assets/footer/network.png"> My Network</div></a>
-      <a><div class="open-tab"><img src="../../assets/footer/notepad.png"> ReadME.txt</div></a>
+      <a href="#/blog"><div class="open-tab"><img src="../../assets/footer/network.png">Blog</div></a>
+<!--      <a><div class="open-tab"><img src="../../assets/footer/notepad.png"> ReadME.txt</div></a>-->
     </div>
 
     <div ref="time" class="time">{{ currentTime }}</div>
