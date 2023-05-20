@@ -1,6 +1,18 @@
 <script>
 
+import StartMenuItem from './start_menu.vue'
+
+
+
 export default {
+  components :{
+    StartMenuItem
+  },
+  computed: {
+    start_menu() {
+      return start_menu
+    }
+  },
   data() {
     return {
       currentTime: ''
@@ -15,15 +27,25 @@ export default {
       const hours = date.getHours();
       const minutes = date.getMinutes();
       this.$refs.time.textContent = `${hours}:${minutes}`
+    },
+    openDrawer() {
+      this.$refs.StartMenuRef.toggleShow();
+
     }
   }
 };
 
+
 </script>
 
 <template>
+
+  <StartMenuItem ref="StartMenuRef">
+  </StartMenuItem>
+
+
   <div class="taskbar">
-    <div class="start-button"><img src="../../assets/footer/logo.svg"> start</div>
+    <div class="start-button" @click="openDrawer"><img src="../../assets/footer/logo.svg"> start</div>
 
     <div class="opened-tabs">
       <a href="#/"><div class="open-tab"><img src= "../../assets/footer/documents.png"> Home </div></a>
