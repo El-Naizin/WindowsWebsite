@@ -52,6 +52,9 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 10;
+  border-color: #3f8cf3;
+  background-color: #3f8cf3;
 }
 
 </style>
