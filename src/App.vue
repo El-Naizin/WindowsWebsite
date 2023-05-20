@@ -1,6 +1,7 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import FooterItem from './components/partials/footer.vue'
 </script>
 
 <template>
@@ -13,9 +14,17 @@ import TheWelcome from './components/TheWelcome.vue'
   </header>
 
   <main>
+
     <TheWelcome />
     <q-icon name="cloud" />
+
   </main>
+  <div class="footer">
+    <FooterItem>
+    </FooterItem>
+  </div>
+
+
 </template>
 
 <style scoped>
@@ -45,4 +54,11 @@ header {
     flex-wrap: wrap;
   }
 }
+
+.footer {
+  bottom: 0;
+  position: sticky;
+  height: auto;
+}
+
 </style>
