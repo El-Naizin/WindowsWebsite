@@ -8,13 +8,14 @@ export default {
   },
   mounted() {
     this.$refs.time.textContent = this.getCurrentTime();
-    setInterval(this.getCurrentTime, 60000);
+    setInterval(this.getCurrentTime, 1000);
   },
   methods: {
     getCurrentTime() {
       const date = new Date();
       const hours = date.getHours();
       const minutes = date.getMinutes();
+      const seconds = date.getSeconds();
       return `${hours}:${minutes}`;
     }
   }
