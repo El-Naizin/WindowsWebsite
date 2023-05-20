@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed } from 'vue'
-import Planning from './partials/content_windows/Planning.vue'
-import Blog from "./partials/content_windows/Blog.vue";
+import Planning from '@/components/partials/content_windows/Planning.vue'
+import Blog from "@/components/partials/content_windows/Blog.vue";
 import Lore from "@/components/partials/content_windows/Lore.vue";
 import NotFound from "@/components/partials/content_windows/NotFound.vue";
 
