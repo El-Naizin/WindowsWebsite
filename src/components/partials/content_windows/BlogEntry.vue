@@ -1,16 +1,11 @@
 <script setup>
-
+import Window from '../Window.vue'
 </script>
 
 <template>
-  <div class="window">
-    <div class="title-bar">
-      <div class="title-bar-text">Post</div>
-      <div class="title-bar-controls">
-        <button aria-label="Close"></button>
-      </div>
-    </div>
-  </div>
+  <Window title="Post" help_btn close_btn help_popup="">
+    Lorem Ipsum
+  </Window>
 </template>
 
 <style scoped>

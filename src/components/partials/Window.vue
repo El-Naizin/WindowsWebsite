@@ -3,13 +3,16 @@
     <div class="title-bar">
       <div class="title-bar-text">{{title}}</div>
       <div class="title-bar-controls">
-        <button aria-label="Help" v-if="help_btn"></button>
+        <button aria-label="Help" @click="popup = !popup" v-if="help_btn"></button>
         <button aria-label="Minimize" v-if="minimize_btn"></button>
         <button aria-label="Restore" v-if="restore_btn"></button>
         <button aria-label="Close" v-if="close_btn"></button>
       </div>
     </div>
     <div class="window-body">
+      <div id="help_popup" v-show="popup">
+        {{help_popup}}
+      </div>
       <slot>
         This will only be displayed if there is no content to be distributed.
       </slot>
@@ -19,6 +22,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      popup: false
+    };
+  },
   name: "window",
   props: {
     title : String,
@@ -26,6 +34,7 @@ export default {
     minimize_btn : Boolean,
     restore_btn : Boolean,
     close_btn : Boolean,
+    help_popup : String,
   }
 }
 </script>
@@ -34,4 +43,15 @@ export default {
 .title-bar-text {
   font-family: Tahoma, sans-serif;
 }
+
+/* to overlay the help popup with the window */
+.window-body {
+  position: relative;
+}
+#help_popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 </style>

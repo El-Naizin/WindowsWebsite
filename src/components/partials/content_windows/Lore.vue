@@ -1,16 +1,14 @@
 <script setup>
-
+import Window from '../Window.vue'
 </script>
 
 <template>
-  <div class="window">
-    <div class="title-bar">
-      <div class="title-bar-text">Ackow</div>
-      <div class="title-bar-controls">
-        <button aria-label="Close"></button>
-      </div>
-    </div>
-  </div>
+  <Window title="Ackow" help_btn close_btn help_popup="Ceci est un popup d'aide pour guider l'utilisateur">
+    <p>Ceci est une fenêtre dédiée à Ackow.</p>
+    <p>Ceci est une fenêtre dédiée à Ackow.</p>
+    <p>Ceci est une fenêtre dédiée à Ackow.</p>
+    <p>Ceci est une fenêtre dédiée à Ackow.</p>
+  </Window>
 </template>
 
 <style scoped>
