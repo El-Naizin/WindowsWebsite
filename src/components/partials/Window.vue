@@ -44,6 +44,13 @@ export default {
   font-family: Tahoma, sans-serif;
 }
 
+.window {
+  width: 170vh;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
 /* to overlay the help popup with the window */
 .window-body {
   position: relative;
