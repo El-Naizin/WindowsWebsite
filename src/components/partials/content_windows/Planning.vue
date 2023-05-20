@@ -3,7 +3,7 @@ import Window from '../Window.vue'
 </script>
 
 <template>
-  <Window title="Planning" help_btn close_btn help_popup="">
+  <Window title="Planning" help_btn help_popup="">
     Lorem Ipsum
   </Window>
 </template>

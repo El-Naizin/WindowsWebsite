@@ -28,7 +28,6 @@ header {
     padding-right: calc(var(--section-gap) / 2);
   }
 
-
   header {
     display: flex;
     place-items: flex-start;
