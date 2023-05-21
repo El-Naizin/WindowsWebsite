@@ -27,7 +27,8 @@ header {
 #main_wrapper {
   width: 100%;
   height: 100%;
-  background-color: #5eac56;
+  background-size: cover;
+  background-image: url('assets/backgrounds/Retrowave1.png');
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -47,6 +48,7 @@ header {
   height: 32px;
   flex-grow: 0;
 }
+
 .taskbar {
   position: inherit;
   height: 100%;

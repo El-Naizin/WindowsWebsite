@@ -8,13 +8,27 @@ export default {
   methods: {
     toggleShow() {
       this.showStartMenu = !this.showStartMenu;
+      this.$nextTick(() => {
+        this.$refs.StartMenuRef.focus();
+      })
+
+    },
+    handleFocusOut() {
+      this.showStartMenu = false;
     }
+
   }
 };
 </script>
 
 <template>
-  <div class="window" id="start_menu" v-show="showStartMenu">
+  <div class="window"
+       id="start_menu"
+       v-show="showStartMenu"
+       ref="StartMenuRef"
+       @focusout="handleFocusOut"
+       tabindex="0"
+  >
     <div class="q-pa-md-none" style="max-width: 350px">
       <div class="title-bar" style="min-height: 10vh">
         <q-item>
