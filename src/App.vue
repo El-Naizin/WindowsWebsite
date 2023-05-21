@@ -3,8 +3,24 @@ import FooterItem from './components/partials/Footer.vue'
 import MainWindow from './components/MainWindow.vue';
 </script>
 
+<script>
+export default {
+  name: 'Example',
+  data() {
+    return {
+      images: ["a.png", "b.png", "c.png"],
+    };
+  },
+  methods: {
+    randomBackground() {
+      return `/backgrounds/${this.images[Math.floor(Math.random() * this.images.length)]}`;
+    },
+  },
+};
+</script>
+
 <template>
-  <div id="main_wrapper">
+  <div id="main_wrapper" v-bind:style="{ backgroundImage: 'url(' + randomBackground() + ')' }">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <div id="main_window_wrapper">
@@ -27,8 +43,8 @@ header {
 #main_wrapper {
   width: 100%;
   height: 100%;
+
   background-size: cover;
-  background-image: url('assets/backgrounds/Retrowave1.png');
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
