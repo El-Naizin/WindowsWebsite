@@ -127,7 +127,7 @@ export default {
   background: url(../../assets/footer/btn2.png) no-repeat 0 0;
 }
 
-.open-tab.active {
+.open-tab:active {
   background: url(../../assets/footer/btn3.png) no-repeat 0 0;
 }
 
