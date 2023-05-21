@@ -1,6 +1,7 @@
 {
   "Entries": [
     {
+      "creation_date": "2023-05-21",
       "md_filename": "entry_one.md",
       "tags": [
         "lorem",
@@ -10,6 +11,7 @@
       ]
     },
     {
+      "creation_date": "2023-05-21",
       "md_filename": "entry_two.md",
       "tags": [
         "lorem",
