@@ -53,7 +53,6 @@ export default {
   flex-direction: column;
 }
 
-/* to overlay the help popup with the window */
 .window-body {
   position: relative;
   margin: 3px 6px;
