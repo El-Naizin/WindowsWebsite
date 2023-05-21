@@ -42,6 +42,11 @@ export default {
 <style scoped>
 .title-bar-text {
   font-family: Tahoma, sans-serif;
+  font-size: large;
+}
+
+.title-bar {
+  min-height: 30px;
 }
 
 .window {
@@ -56,6 +61,7 @@ export default {
 .window-body {
   position: relative;
   margin: 3px 6px;
+  font-size: medium;
 }
 
 #help_popup {
@@ -68,8 +74,9 @@ export default {
   padding: 3px 3px 3px;
   margin: 3px 3px 3px;
   font-size: medium;
-  min-width: 80%;
-  min-height: 80%;
+  min-width: 50%;
+  min-height: 50%;
+  max-width: 50%;
 
 }
 
