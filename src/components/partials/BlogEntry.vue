@@ -17,7 +17,7 @@ export default {
 
 <template>
   <tr>
-    <th class="blog-entry-name"><img src="@/assets/footer/file.png">{{ entryName }}</th>
+    <th class="blog-entry-name"><img src="@/assets/footer/file.png"><a :href="`./#/blog/${entryName}`">{{ entryName }}</a></th>
     <td class="blog-entry-date-added">{{ entryDateAdded }}</td>
     <td class="blog-entry-tags">{{ entryTags }}</td>
   </tr>

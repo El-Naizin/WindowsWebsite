@@ -11,11 +11,12 @@ let jsonData = {};
 export default {
   data() {
     return {
-      markdown: '# Helo, World!'
+      markdown_lists : "",
+      items : "",
     };
   },
   created() {
-    this.getMarkdown();
+    this.getMarkdownEntries();
 
   },
   computed: {
@@ -46,18 +47,21 @@ export default {
 
       Promise.all(fetchPromises)
           .then(() => {
-            this.markdown = '';
-            this.markdown = md_content.map(text => text + '  \n').join('');
+            this.markdown_lists = '';
+            this.markdown_lists = md_content.map(text => text + '  \n').join('');
           })
     },
 
     async getMarkdownEntries() {
       let markdownData = {};
-      await fetch('/Markdown_Entries/index.json')
+
+      const fetchPromise = await fetch('/Markdown_Entries/index.json')
           .then(response => response.json())
           .then(json => markdownData = json);
 
-      return markdownData.Entries
+      Promise.all([fetchPromise]).then(() => {
+        this.items = markdownData.Entries;
+      });
     },
   },
 };
@@ -81,10 +85,11 @@ export default {
           <th scope="col" id="file-tags-header">Tags</th>
         </tr>
       </thead>
-        <BlogEntry entryName="fichier.md" entryTags="jeu live" entryDateAdded="04/10/2023"></BlogEntry>
-        <BlogEntry entryName="deuxieme.md" entryTags="jeu live" entryDateAdded="04/10/2023"></BlogEntry>
-        <BlogEntry entryName="troisieme.md" entryTags="jeu live" entryDateAdded="04/10/2023"></BlogEntry>
-        <BlogEntry entryName="salut.md" entryTags="jeu live" entryDateAdded="04/10/2023"></BlogEntry>
+      <div v-for="(item, index) in items">
+
+        <BlogEntry :entryName="item.md_filename" :entryDateAdded="item.creation_date" :entryTags="item.tags.join(' ')"></BlogEntry>
+
+      </div>
     </table>
 <!--    <div v-html="getRenderedMarkdown"></div>-->
   </Window>
