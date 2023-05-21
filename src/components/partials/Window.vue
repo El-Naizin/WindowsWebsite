@@ -56,7 +56,7 @@ export default {
 /* to overlay the help popup with the window */
 .window-body {
   position: relative;
-  margin: 0 3px 3px;
+  margin: 3px 6px;
 }
 
 #help_popup {
