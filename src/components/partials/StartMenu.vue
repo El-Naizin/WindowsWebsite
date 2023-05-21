@@ -89,6 +89,14 @@ export default {
             </q-item>
           </div>
         </q-list>
+      <div id="logoff" class="title-bar" style="min-height: 5vh; min-width: 5vh">
+
+        <router-link to="/home">
+            <q-item>
+              <q-item-section id="logoff-text">Se déconnecter</q-item-section>
+            </q-item>
+        </router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -112,6 +120,19 @@ export default {
   color: white;
   font-size: large;
   font-family: Tahoma, sans-serif;
+}
+
+#logoff {
+  position: fixed;
+  bottom: 5%;
+  left: 13.5%;
+}
+
+#logoff-text {
+  color: white;
+  font-size: small;
+  font-family: Tahoma, sans-serif;
+  text-align: right;
 }
 
 #Ackow_PP {
