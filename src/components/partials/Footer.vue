@@ -14,11 +14,11 @@ export default {
   },
   data() {
     return {
-      currentTime: ''
+      currentTime: '',
     };
   },
   mounted() {
-    setInterval(this.getCurrentTime, 10);
+    setInterval(this.getCurrentTime, 1000);
   },
   methods: {
     getCurrentTime() {
@@ -29,8 +29,7 @@ export default {
     },
     openDrawer() {
       this.$refs.StartMenuRef.toggleShow();
-
-    }
+    },
   }
 };
 
@@ -44,7 +43,9 @@ export default {
 
 
   <div class="taskbar">
-    <div class="start-button" @click="openDrawer"><img src="../../assets/footer/logo.svg"> start</div>
+    <div class="start-button"
+         @click="openDrawer"
+    ><img src="../../assets/footer/logo.svg"> start</div>
 
     <div class="opened-tabs">
       <a href="#/">

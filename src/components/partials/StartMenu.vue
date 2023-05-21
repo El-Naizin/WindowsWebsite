@@ -7,16 +7,15 @@ export default {
   },
   methods: {
     toggleShow() {
-      this.showStartMenu = !this.showStartMenu;
+      this.showStartMenu = true;
       this.$nextTick(() => {
         this.$refs.StartMenuRef.focus();
       })
-
     },
-    handleFocusOut() {
+    async handleFocusOut() {
+      await new Promise(resolve => setTimeout(resolve, 100));
       this.showStartMenu = false;
     }
-
   }
 };
 </script>
