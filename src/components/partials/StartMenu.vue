@@ -29,10 +29,9 @@ export default {
       </div>
       <q-separator id="Start_menu_separator" />
 
-<!--      <q-list bordered class="absolute-bottom" aria-setsize="-1" style="background-color: lightblue">-->
       <q-list bordered class="row">
           <div class="col-7">
-            <q-item v-ripple href="https://www.twitch.tv/ackow_">
+            <q-item v-ripple href="https://www.twitch.tv/ackow_" target="_blank">
               <q-item-section avatar>
                 <q-avatar square>
                   <img src="src/assets/startMenu/twitch.png">
@@ -43,20 +42,20 @@ export default {
 
             <q-separator/>
 
-            <q-item v-ripple href="#">
+            <q-item v-ripple href="https://twitter.com/Ackowlarie" target="_blank">
               <q-item-section avatar>
                 <q-avatar square>
-                  <img src="src/assets/startMenu/youtube.png">
+                  <img src="src/assets/startMenu/twitter.png">
                 </q-avatar>
               </q-item-section>
-              <q-item-section>Youtube</q-item-section>
+              <q-item-section>Twitter</q-item-section>
             </q-item>
           </div>
 
           <q-separator id="vertical_separator" vertical color="light-blue-2"/>
 
           <div id="side_panel" class="col">
-            <q-item v-ripple href="https://www.twitch.tv/ackow_">
+            <q-item v-ripple href="https://www.twitch.tv/ackow_" target="_blank">
               <q-item-section avatar>
                 <q-avatar square>
                   <img src="src/assets/startMenu/twitch.png">
@@ -67,13 +66,13 @@ export default {
 
             <q-separator/>
 
-            <q-item v-ripple href="#">
+            <q-item v-ripple href="https://twitter.com/Ackowlarie" target="_blank">
               <q-item-section avatar>
                 <q-avatar square>
-                  <img src="src/assets/startMenu/youtube.png">
+                  <img src="src/assets/startMenu/twitter.png">
                 </q-avatar>
               </q-item-section>
-              <q-item-section>Youtube</q-item-section>
+              <q-item-section>Twitter</q-item-section>
             </q-item>
           </div>
         </q-list>
@@ -95,12 +94,6 @@ export default {
   min-width: 50vh;
   min-height: 50vh;
 }
-
-/*#side_panel {*/
-/*  background-color: lightblue;*/
-/*  position: relative;*/
-/*  z-index: 0;*/
-/*}*/
 
 #Ackow {
   color: white;

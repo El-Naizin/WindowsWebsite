@@ -45,40 +45,32 @@ export default {
 }
 
 .window {
-  /*
-  width: 170vh;
-  height: 80vh;
-  */
   max-width: 95%;
   max-height: 95%;
   min-width: 50%;
   min-height: 30%;
-  /*
-  margin-left: 15%;
-  margin-right: 15%;
-  */
-  /*
-  margin: 25% 15%;
-  height: 50%;
-  */
   display: flex;
   flex-direction: column;
 }
 
-/* to overlay the help popup with the window */
 .window-body {
   position: relative;
-  margin: 0;
-  padding: 0 3px 3px;
+  margin: 3px 6px;
 }
 
 #help_popup {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 10;
-  border-color: #3f8cf3;
-  background-color: #3f8cf3;
+  border: 1px solid black;
+  background-color: whitesmoke;
+  padding: 3px 3px 3px;
+  margin: 3px 3px 3px;
+  font-size: medium;
+  min-width: 80%;
+  min-height: 80%;
+
 }
 
 </style>
