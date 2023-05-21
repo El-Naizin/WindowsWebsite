@@ -3,7 +3,7 @@ import Window from '@/components/partials/Window.vue'
 </script>
 
 <template>
-<Window title="Log On to Windows">
+<Window title="Ouverture de session Windows">
   <div class="field-row">
     <label for="text21">Nom d'utilisateur :</label>
     <input id="text21" value="Ackow_" type="text" />
