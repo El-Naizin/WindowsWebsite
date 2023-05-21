@@ -4,6 +4,11 @@
     max-width: 1280px;
     margin: 0 auto;
     padding: 2rem;
+  /*
+  max-width: 1280px;
+  */
+  margin: 0 auto;
+  padding: 0rem;
 
     font-weight: normal;
 }
@@ -21,6 +26,7 @@ a,
     }
 }
 
+/*
 @media (min-width: 1024px) {
     body {
         display: flex;
@@ -33,7 +39,9 @@ a,
         padding: 0 2rem;
     }
 }
+*/
 
+/*
 .footer {
     position: fixed;
     bottom: 0;
@@ -42,3 +50,4 @@ a,
     height: 32px;
 
 }
+*/

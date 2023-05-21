@@ -4,22 +4,57 @@ import MainWindow from './components/MainWindow.vue';
 </script>
 
 <template>
-  <!-- for responsive design -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <div id="main_wrapper">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <MainWindow></MainWindow>
+    <div id="main_window_wrapper">
+      <MainWindow></MainWindow>
+    </div>
 
-  <div class="footer">
-    <FooterItem>
-    </FooterItem>
+    <div class="footer">
+      <FooterItem>
+      </FooterItem>
+    </div>
   </div>
 </template>
 
 <style scoped>
+/*
 header {
   line-height: 1.5;
 }
+*/
+#main_wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #5eac56;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
 
+#main_window_wrapper {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  flex: none;
+  position: inherit;
+  height: 32px;
+  flex-grow: 0;
+}
+.taskbar {
+  position: inherit;
+  height: 100%;
+}
+
+
+
+/*
 @media (min-width: 1024px) {
   header {
     display: flex;
@@ -33,6 +68,7 @@ header {
     flex-wrap: wrap;
   }
 }
+*/
 
 
 </style>

@@ -45,8 +45,22 @@ export default {
 }
 
 .window {
+  /*
   width: 170vh;
   height: 80vh;
+  */
+  max-width: 95%;
+  max-height: 95%;
+  min-width: 50%;
+  min-height: 30%;
+  /*
+  margin-left: 15%;
+  margin-right: 15%;
+  */
+  /*
+  margin: 25% 15%;
+  height: 50%;
+  */
   display: flex;
   flex-direction: column;
 }
