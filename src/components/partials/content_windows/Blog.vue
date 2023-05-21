@@ -1,12 +1,12 @@
 <script setup>
 import Window from '@/components/partials/Window.vue'
+import BlogEntry from "@/components/partials/BlogEntry.vue";
 </script>
 
 <script>
 import MarkdownIt from 'markdown-it';
-import fs from "fs";
 
-var jsonData = "";
+let jsonData = {};
 
 export default {
   data() {
@@ -27,15 +27,15 @@ export default {
   methods: {
     async getMarkdown() {
 
-      jsonData = await fetch('/Markdown_Entries/index.json')
+      await fetch('/Markdown_Entries/index.json')
           .then(response => response.json())
           .then(json => jsonData = json);
 
 
-      var fetchPromises = [];
-      var md_content = [];
+      let fetchPromises = [];
+      let md_content = [];
 
-      for (var item in jsonData.Entries) {
+      for (let item in jsonData.Entries) {
         const fetchPromise = fetch('/Markdown_Entries/' + jsonData.Entries[item].md_filename)
             .then(response => response.text())
             .then(text => md_content.push(text))
@@ -50,6 +50,15 @@ export default {
             this.markdown = md_content.map(text => text + '  \n').join('');
           })
     },
+
+    async getMarkdownEntries() {
+      let markdownData = {};
+      await fetch('/Markdown_Entries/index.json')
+          .then(response => response.json())
+          .then(json => markdownData = json);
+
+      return markdownData.Entries
+    },
   },
 };
 
@@ -57,10 +66,58 @@ export default {
 
 <template>
   <Window title="Blog" help_btn help_popup="">
-    <div v-html="getRenderedMarkdown"></div>
+<!--
+    <div class="status-bar">
+      <p class="status-bar-field">Press F1 for help</p>
+      <p class="status-bar-field">Slide 1</p>
+      <p class="status-bar-field">CPU Usage: 14%</p>
+    </div>
+-->
+    <table>
+      <thead>
+        <tr class="files-header">
+          <th scope="col" id="file-name-header">Nom</th>
+          <th scope="col" id="file-date-header">Date d'ajout</th>
+          <th scope="col" id="file-tags-header">Tags</th>
+        </tr>
+      </thead>
+        <BlogEntry entryName="fichier.md" entryTags="jeu live" entryDateAdded="04/10/2023"></BlogEntry>
+        <BlogEntry entryName="deuxieme.md" entryTags="jeu live" entryDateAdded="04/10/2023"></BlogEntry>
+        <BlogEntry entryName="troisieme.md" entryTags="jeu live" entryDateAdded="04/10/2023"></BlogEntry>
+        <BlogEntry entryName="salut.md" entryTags="jeu live" entryDateAdded="04/10/2023"></BlogEntry>
+    </table>
+<!--    <div v-html="getRenderedMarkdown"></div>-->
   </Window>
 </template>
 
 <style scoped>
+
+.files-header {
+  border-bottom: 10px solid rgba(208, 206, 191, 0.75);
+}
+
+#file-name-header {
+  word-wrap: unset;
+  max-width: 200px;
+}
+
+th {
+  border-right: 1px solid rgba(208, 206, 191, 0.75);
+  border-left: 1px solid rgba(255, 255, 255, 0.75);
+  text-align: left;
+  &:first-of-type{
+    border-left: none;
+  }
+  &:last-of-type {
+    border-right: none;
+  }
+}
+
+table {
+  width: 100%;
+  max-width: 500px;
+  border-spacing: 0;
+  border: solid 1px black;
+}
 
 </style>
