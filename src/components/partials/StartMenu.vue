@@ -14,99 +14,106 @@ export default {
 </script>
 
 <template>
-  <div class="start_menu" v-show="showStartMenu">
-    <div class="q-pa-md" style="max-width: 350px">
-      <q-list bordered>
-        <q-item clickable v-ripple>
-          <q-item-section avatar>
-            <q-icon color="primary" name="bluetooth"/>
-          </q-item-section>
-
-          <q-item-section>Icon as avatar</q-item-section>
-        </q-item>
-
-        <q-item clickable v-ripple>
-          <q-item-section avatar>
-            <q-avatar color="teal" text-color="white" icon="bluetooth"/>
-          </q-item-section>
-
-          <q-item-section>Avatar-type icon</q-item-section>
-        </q-item>
-
-        <q-item clickable v-ripple>
-          <q-item-section avatar>
-            <q-avatar rounded color="purple" text-color="white" icon="bluetooth"/>
-          </q-item-section>
-
-          <q-item-section>Rounded avatar-type icon</q-item-section>
-        </q-item>
-
-        <q-item clickable v-ripple>
-          <q-item-section avatar>
-            <q-avatar color="primary" text-color="white">
-              R
-            </q-avatar>
-          </q-item-section>
-
-          <q-item-section>Letter avatar-type</q-item-section>
-        </q-item>
-
-        <q-separator/>
-
-        <q-item clickable v-ripple>
-          <q-item-section avatar>
-            <q-avatar>
-              <img src="https://cdn.quasar.dev/img/boy-avatar.png">
-            </q-avatar>
-          </q-item-section>
-          <q-item-section>Image avatar</q-item-section>
-        </q-item>
-
-        <q-item clickable v-ripple>
+  <div class="window" id="start_menu" v-show="showStartMenu">
+    <div class="q-pa-md-none" style="max-width: 350px">
+      <div class="title-bar" style="min-height: 10vh">
+        <q-item>
           <q-item-section avatar>
             <q-avatar square>
-              <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+              <img id="Ackow_PP" src="src/assets/startMenu/Ackow_PP.png">
             </q-avatar>
           </q-item-section>
-          <q-item-section>Image square avatar</q-item-section>
-        </q-item>
 
-        <q-item clickable v-ripple>
-          <q-item-section avatar>
-            <q-avatar rounded>
-              <img src="https://cdn.quasar.dev/img/boy-avatar.png">
-            </q-avatar>
-          </q-item-section>
-          <q-item-section>Image rounded avatar</q-item-section>
+          <q-item-section id="Ackow">Ackow</q-item-section>
         </q-item>
+      </div>
+      <q-separator id="Start_menu_separator" />
 
-        <q-separator/>
+<!--      <q-list bordered class="absolute-bottom" aria-setsize="-1" style="background-color: lightblue">-->
+      <q-list bordered class="row">
+          <div class="col-7">
+            <q-item v-ripple href="https://www.twitch.tv/ackow_">
+              <q-item-section avatar>
+                <q-avatar square>
+                  <img src="src/assets/startMenu/twitch.png">
+                </q-avatar>
+              </q-item-section>
+              <q-item-section>Twitch</q-item-section>
+            </q-item>
 
-        <q-item clickable v-ripple>
-          <q-item-section avatar>
-            <q-avatar rounded>
-              <img src="https://cdn.quasar.dev/img/mountains.jpg">
-            </q-avatar>
-          </q-item-section>
-          <q-item-section>List item</q-item-section>
-        </q-item>
+            <q-separator/>
 
-        <q-item clickable v-ripple>
-          <q-item-section thumbnail>
-            <img src="https://cdn.quasar.dev/img/mountains.jpg">
-          </q-item-section>
-          <q-item-section>List item</q-item-section>
-        </q-item>
-      </q-list>
+            <q-item v-ripple href="#">
+              <q-item-section avatar>
+                <q-avatar square>
+                  <img src="src/assets/startMenu/youtube.png">
+                </q-avatar>
+              </q-item-section>
+              <q-item-section>Youtube</q-item-section>
+            </q-item>
+          </div>
+
+          <q-separator id="vertical_separator" vertical color="light-blue-2"/>
+
+          <div id="side_panel" class="col">
+            <q-item v-ripple href="https://www.twitch.tv/ackow_">
+              <q-item-section avatar>
+                <q-avatar square>
+                  <img src="src/assets/startMenu/twitch.png">
+                </q-avatar>
+              </q-item-section>
+              <q-item-section>Twitch</q-item-section>
+            </q-item>
+
+            <q-separator/>
+
+            <q-item v-ripple href="#">
+              <q-item-section avatar>
+                <q-avatar square>
+                  <img src="src/assets/startMenu/youtube.png">
+                </q-avatar>
+              </q-item-section>
+              <q-item-section>Youtube</q-item-section>
+            </q-item>
+          </div>
+        </q-list>
     </div>
   </div>
 </template>
-//TODO FIX POSITION IN ORDER TO NOT LOOK LIKE GARBAGE
-<style scoped>
-.start_menu {
-  position: fixed;
 
-  bottom: 1%;
-  left: -1%;
+<style scoped>
+#start_menu {
+  position: fixed;
+  bottom: 0%;
+  left: 0%;
+  background-color: white;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.q-pa-md-none {
+  min-width: 50vh;
+  min-height: 50vh;
+}
+
+/*#side_panel {*/
+/*  background-color: lightblue;*/
+/*  position: relative;*/
+/*  z-index: 0;*/
+/*}*/
+
+#Ackow {
+  color: white;
+  font-size: large;
+  font-family: Tahoma, sans-serif;
+}
+
+#Ackow_PP {
+  border: 2px solid white;
+  border-radius: 4px;
+}
+
+#vertical_separator {
+  width: 0.25vh;
 }
 </style>
