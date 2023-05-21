@@ -1,7 +1,7 @@
 <template>
   <div class="window">
     <div class="title-bar">
-      <div class="title-bar-text">{{title}}</div>
+      <div class="title-bar-text">{{ title }}</div>
       <div class="title-bar-controls">
         <button aria-label="Help" @click="popup = !popup" v-if="help_btn"></button>
         <button aria-label="Minimize" v-if="minimize_btn"></button>
@@ -11,7 +11,7 @@
     </div>
     <div class="window-body">
       <div id="help_popup" v-show="popup">
-        {{help_popup}}
+        {{ help_popup }}
       </div>
       <slot>
         This will only be displayed if there is no content to be distributed.
@@ -29,12 +29,12 @@ export default {
   },
   name: "window",
   props: {
-    title : String,
-    help_btn : Boolean,
-    minimize_btn : Boolean,
-    restore_btn : Boolean,
-    close_btn : Boolean,
-    help_popup : String,
+    title: String,
+    help_btn: Boolean,
+    minimize_btn: Boolean,
+    restore_btn: Boolean,
+    close_btn: Boolean,
+    help_popup: String,
   }
 }
 </script>
@@ -55,6 +55,7 @@ export default {
 .window-body {
   position: relative;
 }
+
 #help_popup {
   position: absolute;
   top: 0;

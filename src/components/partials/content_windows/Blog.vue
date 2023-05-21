@@ -5,6 +5,7 @@ import Window from '@/components/partials/Window.vue'
 <script>
 import MarkdownIt from 'markdown-it';
 import fs from "fs";
+
 var jsonData = "";
 
 export default {
@@ -18,7 +19,7 @@ export default {
 
   },
   computed: {
-    getRenderedMarkdown(){
+    getRenderedMarkdown() {
       const md = new MarkdownIt();
       return md.render(this.markdown.toString());
     }
@@ -35,7 +36,7 @@ export default {
       var md_content = [];
 
       for (var item in jsonData.Entries) {
-        const fetchPromise =  fetch('/Markdown_Entries/' + jsonData.Entries[item].md_filename)
+        const fetchPromise = fetch('/Markdown_Entries/' + jsonData.Entries[item].md_filename)
             .then(response => response.text())
             .then(text => md_content.push(text))
 
@@ -56,7 +57,7 @@ export default {
 
 <template>
   <Window title="Blog" help_btn help_popup="">
-    <div v-html="getRenderedMarkdown"> </div>
+    <div v-html="getRenderedMarkdown"></div>
   </Window>
 </template>
 

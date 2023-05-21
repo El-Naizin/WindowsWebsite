@@ -19,7 +19,7 @@ export default {
       <q-list bordered>
         <q-item clickable v-ripple>
           <q-item-section avatar>
-            <q-icon color="primary" name="bluetooth" />
+            <q-icon color="primary" name="bluetooth"/>
           </q-item-section>
 
           <q-item-section>Icon as avatar</q-item-section>
@@ -27,7 +27,7 @@ export default {
 
         <q-item clickable v-ripple>
           <q-item-section avatar>
-            <q-avatar color="teal" text-color="white" icon="bluetooth" />
+            <q-avatar color="teal" text-color="white" icon="bluetooth"/>
           </q-item-section>
 
           <q-item-section>Avatar-type icon</q-item-section>
@@ -35,7 +35,7 @@ export default {
 
         <q-item clickable v-ripple>
           <q-item-section avatar>
-            <q-avatar rounded color="purple" text-color="white" icon="bluetooth" />
+            <q-avatar rounded color="purple" text-color="white" icon="bluetooth"/>
           </q-item-section>
 
           <q-item-section>Rounded avatar-type icon</q-item-section>
@@ -51,7 +51,7 @@ export default {
           <q-item-section>Letter avatar-type</q-item-section>
         </q-item>
 
-        <q-separator />
+        <q-separator/>
 
         <q-item clickable v-ripple>
           <q-item-section avatar>
@@ -80,7 +80,7 @@ export default {
           <q-item-section>Image rounded avatar</q-item-section>
         </q-item>
 
-        <q-separator />
+        <q-separator/>
 
         <q-item clickable v-ripple>
           <q-item-section avatar>

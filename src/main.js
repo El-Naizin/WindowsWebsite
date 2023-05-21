@@ -1,6 +1,6 @@
-import { createApp } from 'vue'
+import {createApp} from 'vue'
 
-import { Quasar } from 'quasar'
+import {Quasar} from 'quasar'
 
 // Import icon libraries
 import '@quasar/extras/material-icons/material-icons.css'

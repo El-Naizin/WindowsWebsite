@@ -3,9 +3,8 @@
 import StartMenuItem from './StartMenu.vue'
 
 
-
 export default {
-  components :{
+  components: {
     StartMenuItem
   },
   computed: {
@@ -26,7 +25,7 @@ export default {
       const date = new Date();
       const hours = date.getHours();
       const minutes = date.getMinutes();
-      this.$refs.time.textContent = `${('0'+hours).slice(-2)}:${('0'+minutes).slice(-2)}`
+      this.$refs.time.textContent = `${('0' + hours).slice(-2)}:${('0' + minutes).slice(-2)}`
     },
     openDrawer() {
       this.$refs.StartMenuRef.toggleShow();
@@ -48,10 +47,16 @@ export default {
     <div class="start-button" @click="openDrawer"><img src="../../assets/footer/logo.svg"> start</div>
 
     <div class="opened-tabs">
-      <a href="#/"><div class="open-tab"><img src= "../../assets/footer/documents.png"> Home </div></a>
-      <a href="#/planning"><div class="open-tab"><img src="../../assets/footer/computer.png"> Planning </div></a>
-      <a href="#/blog"><div class="open-tab"><img src="../../assets/footer/network.png">Blog</div></a>
-<!--      <a><div class="open-tab"><img src="../../assets/footer/notepad.png"> ReadME.txt</div></a>-->
+      <a href="#/">
+        <div class="open-tab"><img src="../../assets/footer/documents.png"> Home</div>
+      </a>
+      <a href="#/planning">
+        <div class="open-tab"><img src="../../assets/footer/computer.png"> Planning</div>
+      </a>
+      <a href="#/blog">
+        <div class="open-tab"><img src="../../assets/footer/network.png">Blog</div>
+      </a>
+      <!--      <a><div class="open-tab"><img src="../../assets/footer/notepad.png"> ReadME.txt</div></a>-->
     </div>
 
     <div ref="time" class="time">{{ currentTime }}</div>

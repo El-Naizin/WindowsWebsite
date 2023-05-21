@@ -1,7 +1,6 @@
 <script setup>
 import FooterItem from './components/partials/Footer.vue'
 import MainWindow from './components/MainWindow.vue';
-
 </script>
 
 <template>
@@ -34,7 +33,6 @@ header {
     flex-wrap: wrap;
   }
 }
-
 
 
 </style>

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue'
+import {computed, ref} from 'vue'
 import Planning from '@/components/partials/content_windows/Planning.vue'
 import Blog from "@/components/partials/content_windows/Blog.vue";
 import Lore from "@/components/partials/content_windows/Lore.vue";
@@ -24,7 +24,7 @@ const currentView = computed(() => {
 </script>
 
 <template>
-  <component :is="currentView" />
+  <component :is="currentView"/>
 </template>
 
 <style scoped>
