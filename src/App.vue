@@ -1,6 +1,18 @@
 <script setup>
 import FooterItem from './components/partials/Footer.vue'
 import MainWindow from './components/MainWindow.vue';
+import {ref, computed} from 'vue'
+import NotFound from "@/components/partials/content_windows/NotFound.vue";
+
+const currentPath = ref(window.location.hash)
+
+window.addEventListener('hashchange', () => {
+  currentPath.value = window.location.hash
+})
+
+const currentView = computed(() => {
+  return currentPath.value.slice(1)
+})
 </script>
 
 <script>
@@ -27,7 +39,7 @@ export default {
       <MainWindow></MainWindow>
     </div>
 
-    <div class="footer">
+    <div class="footer" v-if="currentView !== '/home'">
       <FooterItem>
       </FooterItem>
     </div>

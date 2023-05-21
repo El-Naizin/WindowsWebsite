@@ -3,6 +3,7 @@ import {computed, ref} from 'vue'
 import Planning from '@/components/partials/content_windows/Planning.vue'
 import Blog from "@/components/partials/content_windows/Blog.vue";
 import Lore from "@/components/partials/content_windows/Lore.vue";
+import Home from "@/components/partials/content_windows/Home.vue";
 import NotFound from "@/components/partials/content_windows/NotFound.vue";
 
 const routes = {
@@ -10,6 +11,7 @@ const routes = {
   '/planning': Planning,
   '/blog': Blog,
   // '/about': About
+  '/home': Home,
 }
 
 const currentPath = ref(window.location.hash)
@@ -24,7 +26,7 @@ const currentView = computed(() => {
 </script>
 
 <template>
-  <component :is="currentView"/>
+  <component :is="currentView" />
 </template>
 
 <style scoped>
