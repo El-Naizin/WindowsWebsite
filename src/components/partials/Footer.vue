@@ -45,18 +45,19 @@ export default {
   <div class="taskbar">
     <div class="start-button"
          @click="openDrawer"
-    ><img src="../../assets/footer/logo.svg"> start</div>
+    ><img src="../../assets/footer/logo.svg"> start
+    </div>
 
     <div class="opened-tabs">
-      <a href="#/">
+      <router-link to="/lore">
         <div class="open-tab"><img src="../../assets/footer/documents.png"> Home</div>
-      </a>
-      <a href="#/planning">
+      </router-link>
+      <router-link to="/planning">
         <div class="open-tab"><img src="../../assets/footer/computer.png"> Planning</div>
-      </a>
-      <a href="#/blog">
+      </router-link>
+      <router-link to="/blog">
         <div class="open-tab"><img src="../../assets/footer/network.png">Blog</div>
-      </a>
+      </router-link>
       <!--      <a><div class="open-tab"><img src="../../assets/footer/notepad.png"> ReadME.txt</div></a>-->
     </div>
 
