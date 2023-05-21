@@ -62,10 +62,16 @@ export default {
 #help_popup {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 10;
-  border-color: #3f8cf3;
-  background-color: #3f8cf3;
+  border: 1px solid black;
+  background-color: whitesmoke;
+  padding: 3px 3px 3px;
+  margin: 3px 3px 3px;
+  font-size: medium;
+  min-width: 80%;
+  min-height: 80%;
+
 }
 
 </style>
