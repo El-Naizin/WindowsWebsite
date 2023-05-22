@@ -6,6 +6,7 @@ import Home from "@/components/partials/content_windows/Home.vue";
 import Blog from "@/components/partials/content_windows/Blog.vue";
 import BlogEntryTemplate from "@/components/partials/content_windows/BlogEntryTemplate.vue";
 import Wallpaper from "@/components/partials/content_windows/Wallpaper.vue";
+import NotFound from "@/components/partials/content_windows/NotFound.vue";
 
 const routes = [
     {path: '/', name: 'Home', component: Home},
@@ -14,6 +15,7 @@ const routes = [
     {path: '/lore', name: 'Lore', component: Lore},
     {path: '/blog/:entry', name: 'BlogEntryTemplate', component: BlogEntryTemplate},
     {path: '/wallpaper', name: 'Wallpaper', component: Wallpaper},
+    {path: '/:notFound', name: 'NotFound', component: NotFound}
 ]
 
 const router = createRouter({

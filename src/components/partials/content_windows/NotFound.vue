@@ -4,7 +4,7 @@ import Window from '@/components/partials/Window.vue'
 
 <template>
   <Window title="Not Found" help_btn help_popup="">
-    Lorem Ipsum
+    ARG! cette page n'existe pas! CHEH! bingala bingala
   </Window>
 </template>
 
