@@ -51,18 +51,18 @@ export default {
 
 
   <div class="taskbar">
-    <div class="start-button"
+    <div class="start-button unselectable"
          @click="openDrawer"
     ><img src="../../assets/footer/logo.svg"> start
     </div>
 
     <div class="opened-tabs">
-      <div class="taskbar-tab" :class="{active: isTabOpened('/lore')}" @click="customRoute('/lore')"><img src="../../assets/footer/documents.png"> Home
+      <div class="taskbar-tab unselectable" :class="{active: isTabOpened('/lore')}" @click="customRoute('/lore')"><img src="../../assets/footer/documents.png"> Home
       </div>
-      <div class="taskbar-tab" :class="{active: isTabOpened('/planning')}" @click="customRoute('/planning')"><img src="../../assets/footer/computer.png">
+      <div class="taskbar-tab unselectable" :class="{active: isTabOpened('/planning')}" @click="customRoute('/planning')"><img src="../../assets/footer/computer.png">
         Planning
       </div>
-      <div class="taskbar-tab" :class="{active: isTabOpened('/blog')}" @click="customRoute('/blog')"><img src="../../assets/footer/network.png">Blog
+      <div class="taskbar-tab unselectable" :class="{active: isTabOpened('/blog')}" @click="customRoute('/blog')"><img src="../../assets/footer/network.png">Blog
       </div>
       <!--      <a><div class="open-tab"><img src="../../assets/footer/notepad.png"> ReadME.txt</div></a>-->
     </div>
@@ -165,4 +165,11 @@ export default {
   text-transform: uppercase;
 }
 
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 </style>
