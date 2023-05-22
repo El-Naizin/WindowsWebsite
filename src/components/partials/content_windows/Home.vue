@@ -34,8 +34,6 @@ export default {
     </div>
     <div id="btn_login">
       <button class="btn_ok" @click="clickLogin">Login</button>
-      <!--    <button class="btn_ok" v-else>Login</button>-->
-      <!--    <button class="btn_cancel" disabled>Annuler</button>-->
     </div>
   </Window>
 </template>
@@ -50,11 +48,6 @@ export default {
 .btn_ok {
   margin-left: 20px;
   margin-right: 5px;
-}
-
-.btn_cancel {
-  margin-left: 5px;
-  margin-right: 10px;
 }
 
 label {

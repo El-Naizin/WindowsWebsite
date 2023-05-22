@@ -1,8 +1,7 @@
 <script setup>
 import FooterItem from './components/partials/Footer.vue'
 import MainWindow from './components/MainWindow.vue';
-import NotFound from "@/components/partials/content_windows/NotFound.vue";
-import { useRouter, useRoute } from 'vue-router'
+import { useRoute } from 'vue-router'
 </script>
 
 <script>
@@ -24,12 +23,11 @@ export default {
 <template>
   <div id="main_wrapper" v-bind:style="{ backgroundImage: 'url(' + randomBackground() + ')' }">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <div id="main_window_wrapper">
       <MainWindow></MainWindow>
     </div>
 
-    <div class="footer" >
+    <div class="footer" v-if="useRoute().path !== '/'">
       <FooterItem>
       </FooterItem>
     </div>
@@ -37,11 +35,6 @@ export default {
 </template>
 
 <style scoped>
-/*
-header {
-  line-height: 1.5;
-}
-*/
 #main_wrapper {
   width: 100%;
   height: 100%;
@@ -66,29 +59,4 @@ header {
   height: 32px;
   flex-grow: 0;
 }
-
-.taskbar {
-  position: inherit;
-  height: 100%;
-}
-
-
-
-/*
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  header {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-*/
-
-
 </style>
