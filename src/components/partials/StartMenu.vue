@@ -89,8 +89,8 @@ export default {
             </q-item>
           </div>
         </q-list>
-      <div id="logoff" class="title-bar" style="min-height: 5vh; min-width: 5vh">
 
+      <div id="logoff">
         <router-link to="">
             <q-item>
               <q-item-section id="logoff-text" @click="this.$router.push('/')">Se déconnecter</q-item-section>
@@ -125,7 +125,26 @@ export default {
 #logoff {
   position: fixed;
   bottom: 5%;
-  left: 13.5%;
+  left: 13.325%;
+
+  font-size:11px;
+  background:#000;
+  padding:3px 2px 3px 3px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-family:Trebuchet MS;
+  background:linear-gradient(100deg,#3f8cf3,#4892F7 8%,#14A5F0 40%,#06f 88%,#06f 93%,#19B9F3 95%,#1290E9 96%,lightblue);
+  padding:3px 5px 3px 3px;
+  border-top:1px solid #0831d9;
+  border-left:1px solid #0831d9;
+  /*border-bottom:1px solid #001ea0;*/
+  /*border-bottom-left-radius:8px;*/
+  border-top-left-radius:7px;
+  font-size:13px;
+  height:21px;
+  min-height: 4vh;
+  min-width: 5vh;
 }
 
 #logoff-text {
