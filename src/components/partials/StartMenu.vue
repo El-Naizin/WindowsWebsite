@@ -91,9 +91,9 @@ export default {
         </q-list>
       <div id="logoff" class="title-bar" style="min-height: 5vh; min-width: 5vh">
 
-        <router-link to="/">
+        <router-link to="">
             <q-item>
-              <q-item-section id="logoff-text">Se déconnecter</q-item-section>
+              <q-item-section id="logoff-text" @click="this.$router.push('/')">Se déconnecter</q-item-section>
             </q-item>
         </router-link>
       </div>
