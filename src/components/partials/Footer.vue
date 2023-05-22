@@ -28,13 +28,18 @@ export default {
     openDrawer() {
       this.$refs.StartMenuRef.toggleShow();
     },
-    customRoute(newPage) {
-      if (newPage === this.$route.path) {
+    customRoute(newRoute) {
+      if (newRoute === this.$route.path) {
         this.$router.push('/wallpaper')
       } else {
-        this.$router.push(newPage)
+        this.$router.push(newRoute)
       }
     },
+    isTabOpened(routePath) {
+      /// Return open-tab if this tab is the current active route, or closed tab if
+      /// the tab is not the current active route
+      return this.$route.path === routePath;
+    }
   }
 };
 </script>
@@ -52,12 +57,12 @@ export default {
     </div>
 
     <div class="opened-tabs">
-      <div class="open-tab" @click="customRoute('/lore')"><img src="../../assets/footer/documents.png"> Home
+      <div class="taskbar-tab" :class="{active: isTabOpened('/lore')}" @click="customRoute('/lore')"><img src="../../assets/footer/documents.png"> Home
       </div>
-      <div class="open-tab" @click="customRoute('/planning')"><img src="../../assets/footer/computer.png">
+      <div class="taskbar-tab" :class="{active: isTabOpened('/planning')}" @click="customRoute('/planning')"><img src="../../assets/footer/computer.png">
         Planning
       </div>
-      <div class="open-tab" @click="customRoute('/blog')"><img src="../../assets/footer/network.png">Blog
+      <div class="taskbar-tab" :class="{active: isTabOpened('/blog')}" @click="customRoute('/blog')"><img src="../../assets/footer/network.png">Blog
       </div>
       <!--      <a><div class="open-tab"><img src="../../assets/footer/notepad.png"> ReadME.txt</div></a>-->
     </div>
@@ -106,7 +111,7 @@ export default {
   float: left;
 }
 
-.open-tab {
+.taskbar-tab {
   width: 150px;
   height: 26px;
   margin: 3px 0;
@@ -126,19 +131,23 @@ export default {
   cursor: pointer;
 }
 
-.open-tab:hover {
+.taskbar-tab:hover {
   background: url(../../assets/footer/btn2.png) no-repeat 0 0;
 }
 
-.open-tab:active {
+.taskbar-tab:active {
   background: url(../../assets/footer/btn3.png) no-repeat 0 0;
 }
 
-.open-tab img {
+.taskbar-tab img, .closed-tab img {
   height: 18px;
   float: left;
   transform: translateY(-3px);
   margin-right: 5px;
+}
+
+.taskbar-tab.active {
+  background: url(../../assets/footer/btn3.png) no-repeat 0 0;
 }
 
 .time {
