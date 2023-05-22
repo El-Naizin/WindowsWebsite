@@ -85,11 +85,7 @@ export default {
           <th scope="col" id="file-tags-header">Tags</th>
         </tr>
       </thead>
-      <div v-for="(item, index) in items">
-
-        <BlogEntry :entryName="item.md_filename" :entryDateAdded="item.creation_date" :entryTags="item.tags.join(' ')"></BlogEntry>
-
-      </div>
+      <BlogEntry :entryName="item.md_filename" :entryDateAdded="item.creation_date" :entryTags="item.tags.join(' ')" v-for="(item, index) in items"></BlogEntry>
     </table>
 <!--    <div v-html="getRenderedMarkdown"></div>-->
   </Window>

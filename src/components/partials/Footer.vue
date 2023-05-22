@@ -1,7 +1,5 @@
 <script>
-
 import StartMenuItem from './StartMenu.vue'
-
 
 export default {
   components: {
@@ -30,10 +28,15 @@ export default {
     openDrawer() {
       this.$refs.StartMenuRef.toggleShow();
     },
+    customRoute(newPage) {
+      if (newPage === this.$route.path) {
+        this.$router.push('/wallpaper')
+      } else {
+        this.$router.push(newPage)
+      }
+    },
   }
 };
-
-
 </script>
 
 <template>
@@ -49,15 +52,13 @@ export default {
     </div>
 
     <div class="opened-tabs">
-      <router-link to="/lore">
-        <div class="open-tab"><img src="../../assets/footer/documents.png"> Home</div>
-      </router-link>
-      <router-link to="/planning">
-        <div class="open-tab"><img src="../../assets/footer/computer.png"> Planning</div>
-      </router-link>
-      <router-link to="/blog">
-        <div class="open-tab"><img src="../../assets/footer/network.png">Blog</div>
-      </router-link>
+      <div class="open-tab" @click="customRoute('/lore')"><img src="../../assets/footer/documents.png"> Home
+      </div>
+      <div class="open-tab" @click="customRoute('/planning')"><img src="../../assets/footer/computer.png">
+        Planning
+      </div>
+      <div class="open-tab" @click="customRoute('/blog')"><img src="../../assets/footer/network.png">Blog
+      </div>
       <!--      <a><div class="open-tab"><img src="../../assets/footer/notepad.png"> ReadME.txt</div></a>-->
     </div>
 

@@ -15,11 +15,9 @@ export default {
 }
 </script>
 
-//TODO FIX PADDING IN CSS
-
 <template>
   <tr>
-    <th class="blog-entry-name"><img src="@/assets/footer/file.png"><a :href="`./#/blog/${entryName}`">{{ entryName }}</a></th>
+    <th class="blog-entry-name"><img src="@/assets/footer/file.png"><router-link :to="`/blog/${entryName}`">{{ entryName }}</router-link></th>
     <td class="blog-entry-date-added">{{ entryDateAdded }}</td>
     <td class="blog-entry-tags">{{ entryTags }}</td>
   </tr>
