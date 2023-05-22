@@ -11,15 +11,37 @@ export default {
     entryName: String,
     entryTags: String,
     entryDateAdded: String,
+    selectedEntry: String,
+  },
+  methods: {
+    updateSelectedEntry(newEntry) {
+      console.log('New entry: ' + newEntry)
+      this.$emit('updateSelectedEntry', newEntry)
+    },
+    isSelectedClass() {
+      if (this.entryName === this.selectedEntry) {
+        return "entryselected"
+      }
+    }
   }
 }
 </script>
 
 <template>
-  <tr>
-    <th class="blog-entry-name"><img src="@/assets/footer/file.png"><router-link :to="`/blog/${entryName}`">{{ entryName }}</router-link></th>
-    <td class="blog-entry-date-added">{{ entryDateAdded }}</td>
-    <td class="blog-entry-tags">{{ entryTags }}</td>
+  <tr
+      @click="updateSelectedEntry(this.entryName)" :class="{entryselected: this.entryName === this.selectedEntry}"
+      @dblclick="this.$router.push(`/blog/${entryName}`)"
+  >
+    <th class="blog-entry-name">
+      <img src="@/assets/footer/file.png">
+      {{ entryName }}
+    </th>
+    <td class="blog-entry-date-added">
+      {{ entryDateAdded }}
+    </td>
+    <td class="blog-entry-tags">
+      {{ entryTags }}
+    </td>
   </tr>
 </template>
 
@@ -33,22 +55,29 @@ th {
   text-align: left;
 }
 
+.entryselected th {
+  background-color: #e0e0e0;
+}
+
 tr {
   background-color: #f8f8f8;
+  user-select: none;
+  cursor: pointer;
 }
+
+.entryselected {
+  background-color: #e0e0e0;
+  border: 1px dashed #1D1D1D;
+}
+
 
 img {
   height: 1em;
   width: auto;
 }
 
-/*
-tr:nth-of-type(odd) {
-  background-color: #E6E6E6;
-}
-*/
-
 td {
   padding: 0;
 }
+
 </style>

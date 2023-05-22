@@ -11,8 +11,9 @@ let jsonData = {};
 export default {
   data() {
     return {
-      markdown_lists : "",
-      items : "",
+      markdown_lists: "",
+      items: "",
+      selectedEntry: "None",
     };
   },
   created() {
@@ -70,31 +71,39 @@ export default {
 
 <template>
   <Window title="Blog" help_btn help_popup="">
-<!--
-    <div class="status-bar">
-      <p class="status-bar-field">Press F1 for help</p>
-      <p class="status-bar-field">Slide 1</p>
-      <p class="status-bar-field">CPU Usage: 14%</p>
-    </div>
--->
+    <!--
+        <div class="status-bar">
+          <p class="status-bar-field">Press F1 for help</p>
+          <p class="status-bar-field">Slide 1</p>
+          <p class="status-bar-field">CPU Usage: 14%</p>
+        </div>
+    -->
     <table>
       <thead>
-        <tr class="files-header">
-          <th scope="col" id="file-name-header">Nom</th>
-          <th scope="col" id="file-date-header">Date d'ajout</th>
-          <th scope="col" id="file-tags-header">Tags</th>
-        </tr>
+      <tr class="files-header">
+        <th scope="col" id="file-name-header">Nom</th>
+        <th scope="col" id="file-date-header">Date d'ajout</th>
+        <th scope="col" id="file-tags-header">Tags</th>
+      </tr>
       </thead>
-      <BlogEntry :entryName="item.md_filename" :entryDateAdded="item.creation_date" :entryTags="item.tags.join(' ')" v-for="(item, index) in items"></BlogEntry>
+      <tbody>
+      <BlogEntry :entryName="item.md_filename"
+                 :entryDateAdded="item.creation_date"
+                 :entryTags="item.tags.join(' ')"
+                 :selected-entry="selectedEntry"
+                 @updateSelectedEntry="(newEntry) => this.selectedEntry = newEntry"
+                 v-for="(item, index) in items"
+                 ></BlogEntry>
+      </tbody>
     </table>
-<!--    <div v-html="getRenderedMarkdown"></div>-->
+    <!--    <div v-html="getRenderedMarkdown"></div>-->
   </Window>
 </template>
 
 <style scoped>
 
 .files-header {
-  border-bottom: 10px solid rgba(208, 206, 191, 0.75);
+  border-bottom: 1px transparent;
 }
 
 #file-name-header {
@@ -106,9 +115,11 @@ th {
   border-right: 1px solid rgba(208, 206, 191, 0.75);
   border-left: 1px solid rgba(255, 255, 255, 0.75);
   text-align: left;
-  &:first-of-type{
+
+  &:first-of-type {
     border-left: none;
   }
+
   &:last-of-type {
     border-right: none;
   }
@@ -116,9 +127,10 @@ th {
 
 table {
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   border-spacing: 0;
-  border: solid 1px black;
+  //border: solid 1px black;
+  border-collapse: collapse;
 }
 
 </style>
