@@ -16,26 +16,6 @@
         "Musique",
         "Dessin"
       ]
-    },
-    {
-      "creation_date": "2023-05-21",
-      "md_filename": "entry_tres.md",
-      "tags": [
-        "lorem",
-        "ipsum",
-        "tag1",
-        "tag2"
-      ]
-    },
-    {
-      "creation_date": "2023-05-21",
-      "md_filename": "quatro.md",
-      "tags": [
-        "lorem",
-        "ipsum",
-        "tag1",
-        "tag2"
-      ]
     }
   ]
 }

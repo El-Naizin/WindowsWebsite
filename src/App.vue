@@ -6,7 +6,7 @@ import { useRoute } from 'vue-router'
 
 <script>
 export default {
-  name: 'Example',
+  last_bg: 'a.png',
   data() {
     return {
       images: ["a.png", "b.png", "c.png"],
@@ -14,7 +14,10 @@ export default {
   },
   methods: {
     randomBackground() {
-      return `/backgrounds/${this.images[Math.floor(Math.random() * this.images.length)]}`;
+
+      //TODO: If this is /wallpaper, keep the last one, else take a random
+      // return `/backgrounds/${this.images[Math.floor(Math.random() * this.images.length)]}`;
+       return `/backgrounds/b.png`;
     },
   },
 };

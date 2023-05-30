@@ -59,9 +59,12 @@ export default {
 }
 
 .window-body {
+
+  max-height: 800px;
   position: relative;
   margin: 3px 6px;
   font-size: medium;
+  overflow: auto;
 }
 
 #help_popup {

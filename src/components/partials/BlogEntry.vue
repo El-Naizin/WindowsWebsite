@@ -30,7 +30,7 @@ export default {
 <template>
   <tr
       @click="updateSelectedEntry(this.entryName)" :class="{entryselected: this.entryName === this.selectedEntry}"
-      @dblclick="this.$router.push(`/blog/${entryName}`)"
+      @dblclick="this.$router.push(`/blog/${entryName.slice(0, -3)}`)"
   >
     <th class="blog-entry-name">
       <img src="@/assets/footer/file.png">
