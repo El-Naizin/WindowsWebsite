@@ -18,7 +18,6 @@ export default {
   },
   created() {
     this.getMarkdownEntries();
-
   },
   computed: {
     getRenderedMarkdown() {

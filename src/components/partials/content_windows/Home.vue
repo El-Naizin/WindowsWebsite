@@ -17,7 +17,6 @@ export default {
         this.$router.push('/lore')
       }
     },
-
   }
 }
 </script>

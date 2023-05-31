@@ -43,7 +43,7 @@ export default {
       <q-separator id="Start_menu_separator" />
 
       <q-list bordered class="row">
-          <div class="col-7">
+          <div class="col-12">
             <q-item v-ripple href="https://www.twitch.tv/ackow_" target="_blank">
               <q-item-section avatar>
                 <q-avatar square>
@@ -65,29 +65,6 @@ export default {
             </q-item>
           </div>
 
-          <q-separator id="vertical_separator" vertical color="light-blue-2"/>
-
-          <div id="side_panel" class="col">
-            <q-item v-ripple href="https://www.twitch.tv/ackow_" target="_blank">
-              <q-item-section avatar>
-                <q-avatar square>
-                  <img src="src/assets/startMenu/twitch.png">
-                </q-avatar>
-              </q-item-section>
-              <q-item-section>Twitch</q-item-section>
-            </q-item>
-
-            <q-separator/>
-
-            <q-item v-ripple href="https://twitter.com/Ackowlarie" target="_blank">
-              <q-item-section avatar>
-                <q-avatar square>
-                  <img src="src/assets/startMenu/twitter.png">
-                </q-avatar>
-              </q-item-section>
-              <q-item-section>Twitter</q-item-section>
-            </q-item>
-          </div>
         </q-list>
 
       <div id="logoff">

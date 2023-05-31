@@ -15,7 +15,8 @@ export default {
   methods: {
     randomBackground() {
 
-      //TODO: If this is /wallpaper, keep the last one, else take a random
+      //TODO: If this is /wallpapey
+      // r, keep the last one, else take a random
       // return `/backgrounds/${this.images[Math.floor(Math.random() * this.images.length)]}`;
        return `/backgrounds/b.png`;
     },

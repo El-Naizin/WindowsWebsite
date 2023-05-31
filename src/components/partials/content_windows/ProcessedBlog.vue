@@ -27,11 +27,15 @@ export default {
 </script>
 
 <template>
-  <Window :title=this.$route.params.entry help_popup="">
+  <Window :title=this.$route.params.entry help_popup="" class="BlogWindow">
     <div v-html="getRenderedMarkdown"> </div>
   </Window>
 </template>
 
 <style scoped>
+
+.BlogWindow {
+
+}
 
 </style>
