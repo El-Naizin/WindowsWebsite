@@ -28,7 +28,6 @@ export default {
   },
   created() {
     this.getEventEntries();
-    console.log(this.items)
   },
   methods: {
     getEventEntries() {

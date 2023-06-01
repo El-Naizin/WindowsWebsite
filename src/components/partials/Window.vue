@@ -1,6 +1,6 @@
 <template>
-  <div class="window">
-    <div class="title-bar">
+  <div class="window" ref="draggableContainer">
+    <div class="title-bar" @mousedown="dragMouseDown">
       <div class="title-bar-text">{{ title }}</div>
       <div class="title-bar-controls">
         <button aria-label="Help" @click="popup = !popup" v-if="help_btn"></button>
@@ -24,7 +24,14 @@
 export default {
   data() {
     return {
-      popup: false
+      popup: false,
+
+      positions: {
+        clientX: undefined,
+        clientY: undefined,
+        movementX: 0,
+        movementY: 0
+      },
     };
   },
   name: "window",
@@ -35,6 +42,30 @@ export default {
     restore_btn: Boolean,
     close_btn: Boolean,
     help_popup: String,
+  },
+  methods : {
+    dragMouseDown: function (event) {
+      event.preventDefault()
+      // get the mouse cursor position at startup:
+      this.positions.clientX = event.clientX
+      this.positions.clientY = event.clientY
+      document.onmousemove = this.elementDrag
+      document.onmouseup = this.closeDragElement
+    },
+    elementDrag: function (event) {
+      event.preventDefault()
+      this.positions.movementX = this.positions.clientX - event.clientX
+      this.positions.movementY = this.positions.clientY - event.clientY
+      this.positions.clientX = event.clientX
+      this.positions.clientY = event.clientY
+      // set the element's new position:
+      this.$refs.draggableContainer.style.top = (this.$refs.draggableContainer.offsetTop - this.positions.movementY) + 'px'
+      this.$refs.draggableContainer.style.left = (this.$refs.draggableContainer.offsetLeft - this.positions.movementX) + 'px'
+    },
+    closeDragElement () {
+      document.onmouseup = null
+      document.onmousemove = null
+    }
   }
 }
 </script>
@@ -47,6 +78,7 @@ export default {
 
 .title-bar {
   min-height: 30px;
+  z-index: 10;
 }
 
 .window {
@@ -56,6 +88,8 @@ export default {
   min-height: 30%;
   display: flex;
   flex-direction: column;
+  position: absolute;
+  z-index: 9;
 }
 
 .window-body {

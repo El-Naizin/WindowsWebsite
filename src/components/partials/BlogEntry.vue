@@ -15,7 +15,6 @@ export default {
   },
   methods: {
     updateSelectedEntry(newEntry) {
-      console.log('New entry: ' + newEntry)
       this.$emit('updateSelectedEntry', newEntry)
     },
     isSelectedClass() {
