@@ -14,20 +14,16 @@ export default {
   },
 
   data() {
-
-    const currentDate = new Date();
-    const year = currentDate.getFullYear();
-    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
-    const day = String(currentDate.getDate()).padStart(2, '0');
-
     // this.getEventEntries();
 
     return {
       items : [],
       date_events : [],
-      planning_date : `${year}/${month}/${day}`,
+      planning_date : ``,
     }
   },
+
+
   async mounted() {
 
     let JsonData = {};
@@ -43,8 +39,15 @@ export default {
         for(item in this.items){
           this.date_events.push(this.items[item].EventDate);
         }
-      });
+        this.planning_date = this.date_events.reduce((latest, current) => {
+          if (current > latest) {
+            return current;
+          }
+          return latest;
+        }, Object.values(this.date_events)[0]);
 
+        console.log(this.date_events)
+      });
   },
 
   methods: {
@@ -52,6 +55,7 @@ export default {
       // Disable all days except for the ones in the events array
       return this.date_events.value.indexOf(date) === -1;
     },
+    //UNUSED
     async getEventEntries() {
       let JsonData = {};
 
@@ -69,6 +73,7 @@ export default {
         for (item in this.items) {
           this.date_events.push(JsonData.Entries[item].EventDate);
         }
+
       });
 
       console.log(this.date_events)
@@ -82,6 +87,7 @@ export default {
 <template>
   <Window title="Planning" help_btn help_popup="">
     <q-splitter
+        :model-value=NaN
         style="height: 510px"
     >
 
