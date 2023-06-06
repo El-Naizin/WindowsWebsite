@@ -124,13 +124,15 @@ export default {
 
   </Window>
 </template>
-
-<!--TODO change this in order to make the calendar button not look like garbage-->
+<style>
+.q-date button {
+  min-width: 0 !important;
+}
+</style>
 
 <style scoped>
-.q-date__calendar-item {
-  color :red;
-
+.q-date button {
+  min-width: 0 !important;
 }
 
 .basePannel{
