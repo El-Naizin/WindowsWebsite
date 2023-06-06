@@ -126,15 +126,11 @@ export default {
 </template>
 <style>
 .q-date button {
-  min-width: 0 !important;
+  min-width: 0;
 }
 </style>
 
 <style scoped>
-.q-date button {
-  min-width: 0 !important;
-}
-
 .basePannel{
   display: flex;
   justify-content: center;
