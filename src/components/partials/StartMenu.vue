@@ -66,7 +66,7 @@ export default {
 
         </q-list>
 
-      <div id="logoff">
+      <div id="logoff" @click="customRoute('/')">
         <router-link to="/">
             <q-item>
               <q-item-section avatar>
