@@ -67,15 +67,15 @@ export default {
         </q-list>
 
       <div id="logoff">
-        <router-link to="">
+        <router-link to="/">
             <q-item>
               <q-item-section avatar>
                 <q-avatar square>
                   <img src="@/assets/footer/log_out.png">
                 </q-avatar>
               </q-item-section>
-<!--              TODO LOGIC NOT WORKING-->
-              <q-item-section id="logoff-text" @click="this.$router.push('/')">Se déconnecter</q-item-section>
+<!--              TODO CSS LAYOUT-->
+              <q-item-section id="logoff-text">Se déconnecter</q-item-section>
             </q-item>
         </router-link>
       </div>
