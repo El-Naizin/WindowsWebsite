@@ -15,7 +15,6 @@ export default {
     getRenderedMarkdown() {
       const md = new MarkdownIt();
 
-      //TODO doesnt work in release
        fetch('/Markdown_Entries/' + this.$route.params.entry + ".md")
           .then(response => response.text())
           .then(text => this.md_content = text);
@@ -28,7 +27,7 @@ export default {
 </script>
 
 <template>
-  <Window :title=this.$route.params.entry help_popup="" class="BlogWindow">
+  <Window :title=$route.params.entry help_popup="" class="BlogWindow">
 <!--    TODO use default css for <PAR> balise, because it is using xp.css and it looks like garbage-->
     <div v-html="getRenderedMarkdown"> </div>
   </Window>
