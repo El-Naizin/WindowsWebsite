@@ -127,8 +127,9 @@ export default {
   </Window>
 </template>
 
-<style scoped>
+<!--TODO change this in order to make the calendar button not look like garbage-->
 
+<style scoped>
 .q-date__calendar-item {
   color :red;
 

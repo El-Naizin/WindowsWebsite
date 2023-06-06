@@ -74,6 +74,7 @@ export default {
                   <img src="@/assets/footer/log_out.png">
                 </q-avatar>
               </q-item-section>
+<!--              TODO LOGIC NOT WORKING-->
               <q-item-section id="logoff-text" @click="this.$router.push('/')">Se déconnecter</q-item-section>
             </q-item>
         </router-link>
