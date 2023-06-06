@@ -89,8 +89,6 @@ export default {
         style="height: 510px"
     >
 
-<!--      TODO, BUTTONS IS FUCKED UP-->
-
       <template v-slot:before>
         <div class="q-pa-md">
           <q-date
