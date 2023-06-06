@@ -1,47 +1,79 @@
 <script setup>
+
 import Window from '@/components/partials/Window.vue'
-
-import {ref} from 'vue';
-
-// TODO  Makes those dynamic
-const splitterModel = ref(50);
-const date = ref('2023/05/21');
-const events = ref(['2023/05/21', '2023/05/22']);
-
-const disableDays = (date) => {
-  // Disable all days except for the ones in the events array
-  return events.value.indexOf(date) === -1;
-};
 
 </script>
 
 <script>
 
+
+
 export default {
   components: {
     Window,
   },
-  setup() {
+
+  data() {
+
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+    const day = String(currentDate.getDate()).padStart(2, '0');
+
+    // this.getEventEntries();
+
     return {
-      items: []
+      items : [],
+      date_events : [],
+      planning_date : `${year}/${month}/${day}`,
     }
   },
-  created() {
-    this.getEventEntries();
+  async mounted() {
+
+    let JsonData = {};
+
+    fetch('/calendar_index.json')
+      .then(response => response.json())
+      .then(json => {
+        JsonData = json;
+        this.items = JsonData.Entries;
+
+        let item;
+        this.date_events = [];
+        for(item in this.items){
+          this.date_events.push(this.items[item].EventDate);
+        }
+      });
+
   },
+
   methods: {
-    getEventEntries() {
+    disableDays(date) {
+      // Disable all days except for the ones in the events array
+      return this.date_events.value.indexOf(date) === -1;
+    },
+    async getEventEntries() {
       let JsonData = {};
 
-       const fetchPromise = fetch('/calendar_index.json')
+      const fetchPromise = await fetch('/calendar_index.json')
           .then(response => response.json())
           .then(json => {
             JsonData = json;
           });
 
-      Promise.all([fetchPromise]).then(() => {
+      await Promise.all([fetchPromise]).then(() => {
         this.items = JsonData.Entries;
+
+        let item;
+        this.date_events = [];
+        for (item in this.items) {
+          this.date_events.push(JsonData.Entries[item].EventDate);
+        }
       });
+
+      console.log(this.date_events)
+      return this.date_events;
+
     },
   },
 }
@@ -50,7 +82,6 @@ export default {
 <template>
   <Window title="Planning" help_btn help_popup="">
     <q-splitter
-        v-model="splitterModel"
         style="height: 510px"
     >
 
@@ -59,28 +90,28 @@ export default {
       <template v-slot:before>
         <div class="q-pa-md">
           <q-date
-              v-model="date"
+              v-model="this.planning_date"
               :no-unset="true"
-              :disable-days="disableDays"
-              :options="  events"
+              :disable-days="this.disableDays"
+              :options="this.date_events"
               event-color="orange"
-              class="planning-q-date"
           />
         </div>
       </template>
 
       <template v-slot:after>
 
-          <q-tab-panels
-              v-model="date"
-              class="basePannel"
-          >
-            <q-tab-panel v-for="(item, index) in this.items" :name="item.EventDate">
-              <div class="text-h4 q-mb-md">{{item.EventDate}}</div>
-              <p>{{ item.Content }}</p>
-            </q-tab-panel>
+        <q-tab-panels
+            v-model="this.planning_date"
+            class="basePannel"
 
-          </q-tab-panels>
+        >
+          <q-tab-panel class="singularPannel" v-for="(item, index) in this.items" :name="item.EventDate">
+            <div class="text-h4 q-mb-md">{{item.EventDate}}</div>
+            <p>{{ item.Content }}</p>
+          </q-tab-panel>
+
+        </q-tab-panels>
 
       </template>
 
@@ -98,11 +129,12 @@ export default {
 }
 
 .basePannel{
-
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+  overflow-wrap: break-word;
+
 
 }
 

@@ -14,6 +14,20 @@ import Window from '@/components/partials/Window.vue'
     <p>Ceci est une fenêtre dédiée à Ackow.</p>
     <p>Ceci est une fenêtre dédiée à Ackow.</p>
   </Window>
+
+  <Window title="Ackow_" help_btn help_popup="Bonjour, je suis Alexo, l'ordinateur
+  de bord du vaisseau du capitaine Ackow_. Je vous conseille d'essayer le bouton Start pour voir
+  d'autres options que celles de la barre des tâches. 🙂">
+    <p> Second window️ </p>
+  </Window>
+
+  <Window title="Ackow_" help_btn help_popup="Bonjour, je suis Alexo, l'ordinateur
+  de bord du vaisseau du capitaine Ackow_. Je vous conseille d'essayer le bouton Start pour voir
+  d'autres options que celles de la barre des tâches. 🙂">
+    <p> Yeah boy </p>
+  </Window>
+
+
 </template>
 
 <style scoped>
