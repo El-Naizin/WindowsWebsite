@@ -46,7 +46,6 @@ export default {
           return latest;
         }, Object.values(this.date_events)[0]);
 
-        console.log(this.date_events)
       });
   },
 
@@ -76,7 +75,6 @@ export default {
 
       });
 
-      console.log(this.date_events)
       return this.date_events;
 
     },
@@ -96,10 +94,10 @@ export default {
       <template v-slot:before>
         <div class="q-pa-md">
           <q-date
-              v-model="this.planning_date"
+              v-model="planning_date"
               :no-unset="true"
-              :disable-days="this.disableDays"
-              :options="this.date_events"
+              :disable-days="disableDays"
+              :options="date_events"
               event-color="orange"
           />
         </div>
@@ -108,11 +106,11 @@ export default {
       <template v-slot:after>
 
         <q-tab-panels
-            v-model="this.planning_date"
+            v-model="planning_date"
             class="basePannel"
 
         >
-          <q-tab-panel class="singularPannel" v-for="(item, index) in this.items" :name="item.EventDate">
+          <q-tab-panel class="singularPannel" v-for="(item, index) in items" :name="item.EventDate">
             <div class="text-h4 q-mb-md">{{item.EventDate}}</div>
             <p>{{ item.Content }}</p>
           </q-tab-panel>
