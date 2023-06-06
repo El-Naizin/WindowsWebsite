@@ -54,6 +54,21 @@ export default {
 
 <style scoped>
 
+.inputUser {
+  border: none;
+  width: 100%;
+  display: block;
+  padding: 12px 8px;
+  background-color: black;
+  color: #c0c0c0;
+  font-family: "Perfect DOS VGA 437 Win";
+  font-size: 1rem;
+  margin: 0;
+* {
+  font-family: "Perfect DOS VGA 437 Win";
+}
+}
+
 .Window{
   background-color: black;
   display: flex;
@@ -64,21 +79,6 @@ export default {
 .inputWrapper{
   display: flex;
   align-items: center;
-}
-
-.inputUser{
-  border: none;
-  width: 100%;
-  display: block;
-  padding: 12px 8px;
-  background-color: black;
-  color: #c0c0c0;
-  font-family: "Perfect DOS VGA 437 Win";
-  font-size: 1rem;
-  margin: 0;
-  * {
-    font-family: "Perfect DOS VGA 437 Win";
-  }
 }
 
 .window-body{

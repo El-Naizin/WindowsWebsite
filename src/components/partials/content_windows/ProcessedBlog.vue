@@ -28,15 +28,9 @@ export default {
 
 <template>
   <Window :title=$route.params.entry close_btn class="BlogWindow">
-<!--    TODO use default css for <PAR> balise, because it is using xp.css and it looks like garbage-->
     <div v-html="getRenderedMarkdown"> </div>
   </Window>
 </template>
 
 <style scoped>
-
-.BlogWindow {
-
-}
-
 </style>
