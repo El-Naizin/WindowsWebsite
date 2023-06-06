@@ -6,19 +6,21 @@ import { useRoute } from 'vue-router'
 
 <script>
 export default {
-  last_bg: 'a.png',
   data() {
     return {
+      last_bg: 'a.png',
       images: ["a.png", "b.png", "c.png"],
     };
   },
   methods: {
     randomBackground() {
-
-      //TODO: If this is /wallpapey
-      // r, keep the last one, else take a random
-      // return `/backgrounds/${this.images[Math.floor(Math.random() * this.images.length)]}`;
-       return `/backgrounds/b.png`;
+      if (useRoute().path !== '/') {
+        return this.last_bg;
+      }
+      else {
+        this.last_bg = `/backgrounds/${this.images[Math.floor(Math.random() * this.images.length)]}`;
+        return this.last_bg;
+      }
     },
   },
 };
