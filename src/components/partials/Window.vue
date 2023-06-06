@@ -45,7 +45,7 @@ export default {
   },
   methods : {
     dragMouseDown: function (event) {
-      event.preventDefault()
+
       // get the mouse cursor position at startup:
       this.positions.clientX = event.clientX
       this.positions.clientY = event.clientY
