@@ -83,7 +83,7 @@ export default {
 </script>
 
 <template>
-  <Window title="Planning" help_btn help_popup="">
+  <Window title="Planning" help_btn help_popup="" minimize_btn>
     <q-splitter
         :model-value=NaN
         style="height: 510px"

@@ -5,7 +5,7 @@ import Window from '@/components/partials/Window.vue'
 <template>
 
 <!--  TODO use CSS to agence this, or maybe a tableau a la excel-->
-  <Window title="Ackow_" help_btn help_popup="Bonjour, je suis Alexo, l'ordinateur
+  <Window title="Ackow_" minimize_btn help_btn help_popup="Bonjour, je suis Alexo, l'ordinateur
   de bord du vaisseau du capitaine Ackow_. Je vous conseille d'essayer le bouton Start pour voir
   d'autres options que celles de la barre des tâches. 🙂">
     <p>Salut c'est moi Ackow_, capitaine pirate de l'espace ⚓️☄️ <br>
@@ -17,15 +17,11 @@ import Window from '@/components/partials/Window.vue'
     <p>Ceci est une fenêtre dédiée à Ackow.</p>
   </Window>
 
-  <Window title="Ackow_" help_btn help_popup="Bonjour, je suis Alexo, l'ordinateur
-  de bord du vaisseau du capitaine Ackow_. Je vous conseille d'essayer le bouton Start pour voir
-  d'autres options que celles de la barre des tâches. 🙂">
+  <Window title="Ackow_" minimize_btn help_btn>
     <p> Second window️ </p>
   </Window>
 
-  <Window title="Ackow_" help_btn help_popup="Bonjour, je suis Alexo, l'ordinateur
-  de bord du vaisseau du capitaine Ackow_. Je vous conseille d'essayer le bouton Start pour voir
-  d'autres options que celles de la barre des tâches. 🙂">
+  <Window title="Ackow_" minimize_btn help_btn>
     <p> Yeah boy </p>
   </Window>
 

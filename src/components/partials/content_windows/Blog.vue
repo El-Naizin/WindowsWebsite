@@ -69,7 +69,7 @@ export default {
 </script>
 
 <template>
-  <Window title="Blog" help_btn help_popup="">
+  <Window title="Blog" help_btn help_popup="" minimize_btn>
     <table>
       <thead>
       <tr class="files-header">
