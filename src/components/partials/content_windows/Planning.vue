@@ -134,9 +134,13 @@ export default {
   align-items: center;
   height: 100%;
   overflow-wrap: break-word;
-
-
+  overflow: hidden;
 }
+
+.singularPannel {
+  height: 450px;
+}
+
 
 .q-pa-md {
   display: flex;

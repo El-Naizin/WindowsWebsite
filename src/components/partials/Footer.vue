@@ -64,6 +64,8 @@ export default {
       </div>
       <div class="taskbar-tab unselectable" :class="{active: isTabOpened('/blog')}" @click="customRoute('/blog')"><img src="../../assets/footer/network.png">Blog
       </div>
+      <div class="taskbar-tab unselectable" :class="{active: isTabOpened('/cmd')}" @click="customRoute('/cmd')"><img src="../../assets/footer/console_prompt-0.png">cmd
+      </div>
     </div>
 
     <div ref="time" class="time">{{ currentTime }}</div>
