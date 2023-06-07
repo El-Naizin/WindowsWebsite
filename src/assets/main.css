@@ -1,5 +1,15 @@
 @import './base.css';
 
+@font-face {
+    font-family: 'StandardGalacticGlyph';
+    src: url('@/assets/standardgalacticglyph.ttf') format('truetype');
+    /* You may need to adjust the path to match the location of your font file */
+}
+
+.glyph-font {
+    font-family: 'StandardGalacticGlyph', sans-serif;
+}
+
 #app {
     /*
     max-width: 1280px;
