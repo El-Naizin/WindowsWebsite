@@ -8,6 +8,8 @@
 
 .glyph-font {
     font-family: 'StandardGalacticGlyph', sans-serif;
+    color: #9C27B0;
+    text-shadow: 1px 1px 3px #181818;
 }
 .reset-pre pre {
     display: block;
