@@ -78,7 +78,7 @@ export default {
 
 .title-bar {
   min-height: 30px;
-  z-index: 10;
+  z-index: 0;
 }
 
 .window {
@@ -89,7 +89,7 @@ export default {
   display: flex;
   flex-direction: column;
   position: absolute;
-  z-index: 9;
+  z-index: 0;
 }
 
 .window-body {
@@ -105,7 +105,7 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 10;
+  z-index: 1;
   border: 1px solid black;
   background-color: whitesmoke;
   padding: 3px 3px 3px;

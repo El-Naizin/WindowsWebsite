@@ -74,7 +74,6 @@ export default {
                   <img src="@/assets/footer/log_out.png">
                 </q-avatar>
               </q-item-section>
-<!--              TODO CSS LAYOUT-->
               <q-item-section id="logoff-text">Se déconnecter</q-item-section>
             </q-item>
         </router-link>
@@ -96,6 +95,7 @@ export default {
 .q-pa-md-none {
   min-width: 50vh;
   min-height: 50vh;
+  position: relative;
 }
 
 #Ackow {
@@ -105,16 +105,14 @@ export default {
 }
 
 #logoff {
-  position: fixed;
+  position: absolute;
   bottom: 5%;
-  left: 13.325%;
+  right: 0;
 
-  font-size:11px;
-  padding:3px 2px 3px 3px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  font-family:Trebuchet MS;
+  font-family:Trebuchet MS,serif;
   padding:3px 5px 3px 3px;
   border-top-left-radius:7px;
   font-size:13px;
