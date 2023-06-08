@@ -136,6 +136,7 @@ export default {
   height: 100%;
   overflow-wrap: break-word;
   overflow: hidden;
+  //max-width: 300px;
 }
 
 .singularPannel {

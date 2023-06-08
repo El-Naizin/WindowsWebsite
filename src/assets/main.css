@@ -9,6 +9,15 @@
 .glyph-font {
     font-family: 'StandardGalacticGlyph', sans-serif;
 }
+.reset-pre pre {
+    display: block;
+    padding: 12px 8px;
+    background-color: initial;
+    color: initial;
+    font-family: initial;
+    font-size: 1rem;
+    margin: 0;
+}
 
 #app {
     /*
