@@ -28,7 +28,7 @@ export default {
 
 <template>
   <Window :title=$route.params.entry close_btn class="BlogWindow">
-    <div class="reset-pre" v-html="getRenderedMarkdown"> </div>
+    <div class="Markdown-Format" v-html="getRenderedMarkdown"> </div>
   </Window>
 </template>
 

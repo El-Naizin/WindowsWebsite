@@ -2,7 +2,7 @@
   "Entries": [
     {
       "creation_date": "2023-05-21",
-      "md_filename": "entry_one.md",
+      "md_filename": "Story One.md",
       "tags": [
         "Musique",
         "Video",
@@ -11,7 +11,7 @@
     },
     {
       "creation_date": "2023-05-21",
-      "md_filename": "entry_two.md",
+      "md_filename": "Story Two.md",
       "tags": [
         "Musique",
         "Dessin"

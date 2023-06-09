@@ -11,7 +11,8 @@
     color: #9C27B0;
     text-shadow: 1px 1px 3px #181818;
 }
-.reset-pre pre {
+
+.Markdown-Format pre {
     display: block;
     padding: 12px 8px;
     background-color: initial;
@@ -20,6 +21,18 @@
     font-size: 1rem;
     margin: 0;
 }
+
+.Markdown-Format code {
+    font-family: 'StandardGalacticGlyph', sans-serif;
+    color: #9C27B0;
+    text-shadow: 1px 1px 3px #181818;
+}
+
+.Markdown-Format strong {
+    font-weight: bold;
+}
+
+
 
 #app {
     /*

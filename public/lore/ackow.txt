@@ -1,0 +1,17 @@
+* Age : 25 ans
+* Taille : 1m80
+* planète d'origine : AB-CANCRI-12 "Mash's settlement"
+* Affiliation : "Capitaine" pirate du *poussière d'étoile*
+
+![Ackow][ackowPNG]
+[ackowPNG]: file:///path/ackow.png "Ackow \"ack\" Loriage"
+
+Originaire d'une petite colonie miniére perdue dans le système d'Asellus Borealis ``asellus borealis``, Ackow à toujours voulue s'enfuir et devenir capitaine de vaisseau.
+Bien que n'étant pas d'une famille militaire, il réussie à s'inscrire à l'académie navale Karkinos ``karkinos`` dans le système Acubens ``acubens`` en piratant les registre d'admissions de l'académie.
+Malgrè des résultats très prometteurs, il se fait renvoyer en dernier année lorsque la directrice découvrie l'origine de son admission. Estimant être suffisament doué pour commander un vaisseau, Ackow décida d'"emprunter"
+un vaisseau de combat expérimentale des chantier navale d'Ouroboros Laboratory ``ouroboros lab``, la plus puissante corporation du Conglomérat. Faisant ainsi, il devint le capitaine Ackow, ainsi que l'un des pirates de l'espace
+les plus recherché par le Conglomérat Maritime spatiale. La frégate de class Starkiller qu'il venait de volé étant équipé d'un prototype de générateur à mini étoile de classe M, il le baptisa le *Poussière d'étoile* ``stardust``.
+Malheuresement pour notre Capitaine, l'IA du vaisseau n'avait pas encore été télécharger dans celui-ci rendant presque impossible le pilotage sans un équipage complet. Il dû alors atterir en urgence sur Terre lors de sa fuite. Depuis il
+se cache parmis les terriens en attendant les réparations du *poussière d'étoile*.
+ 
+
