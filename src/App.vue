@@ -42,11 +42,14 @@ export default {
 #main_wrapper {
   width: 100%;
   height: 100%;
-
+  position: relative;
   background-size: cover;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
 }
 
 #main_window_wrapper {

@@ -4,7 +4,7 @@ import Window from '@/components/partials/Window.vue'
 
 <template>
   <Window title="Not Found" help_btn help_popup="">
-    ARG! cette page n'existe pas! CHEH! bingala bingala
+    Erreur 404: Cette page n'existe pas
   </Window>
 </template>
 

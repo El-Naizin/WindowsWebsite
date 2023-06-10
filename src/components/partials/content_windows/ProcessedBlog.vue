@@ -35,7 +35,12 @@ export default {
 <style scoped>
 
 .BlogWindow {
+  max-height: 600px;
+  overflow-x: hidden;
+}
 
+.BlogWindow * {
+  overflow-x: hidden;
 }
 
 </style>
