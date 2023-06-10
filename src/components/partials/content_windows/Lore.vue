@@ -30,7 +30,7 @@ export default {
 <template>
 
 
-  <Window title="Ackow 'Ack' Loriage" minimize_btn help_btn help_popup="Bonjour, je suis Alexo, l'ordinateur
+  <Window title="Ackow 'Ack' Loriage" minimize_btn  help_popup="Bonjour, je suis Alexo, l'ordinateur
   de bord du vaisseau du capitaine Ackow_. Je vous conseille d'essayer le bouton Start pour voir
   d'autres options que celles de la barre des tâches. 🙂">
     <div class="Markdown-Format" v-html="getRenderedMarkdown"> </div>

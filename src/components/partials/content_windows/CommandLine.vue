@@ -51,7 +51,7 @@ export default {
 </script>
 
 <template>
-  <Window @click="focusInput" class="Window" title="Terminal" minimize_btn help_btn help_popup="" @keydown.enter="checkInput">
+  <Window @click="focusInput" class="Window" title="Terminal" minimize_btn  help_popup="" @keydown.enter="checkInput">
     <div class="window-body" >
       <pre>Microsoft&#10094;R&#10095; Windows DOS
   &#10094;C&#10095; Copyright Microsoft Corp 1990-2001.
