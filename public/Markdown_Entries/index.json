@@ -1,11 +1,25 @@
 {
   "Entries": [
     {
+      "creation_date": "2023-05-28",
+      "md_filename": "GCC.md",
+      "tags": [
+        "Tech"
+      ]
+    },
+    {
+      "creation_date": "2023-05-25",
+      "md_filename": "SEL.md",
+      "tags": [
+        "anime"
+      ]
+    },
+    {
       "creation_date": "2023-05-21",
       "md_filename": "Story One.md",
       "tags": [
-        "Musique",
-        "Video",
+        "Histoire",
+        "Lore",
         "Jeux-Video"
       ]
     },
@@ -13,8 +27,8 @@
       "creation_date": "2023-05-21",
       "md_filename": "Story Two.md",
       "tags": [
-        "Musique",
-        "Dessin"
+        "Histoire",
+        "Lore"
       ]
     }
   ]
