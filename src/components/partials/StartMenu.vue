@@ -2,8 +2,13 @@
 export default {
   data() {
     return {
-      showStartMenu: false
+      showStartMenu: false,
+      isUnder920px: false,
     };
+  },
+  mounted() {
+    this.checkWindowSize(); // Initial check on component mount
+    window.addEventListener('resize', this.checkWindowSize); // Add event listener for window resize
   },
   methods: {
     toggleShow() {
@@ -15,6 +20,9 @@ export default {
     async handleFocusOut() {
       await new Promise(resolve => setTimeout(resolve, 100));
       this.showStartMenu = false;
+    },
+    checkWindowSize() {
+      this.isUnder920px = window.innerWidth < 920;
     }
   }
 };
@@ -62,11 +70,76 @@ export default {
               </q-item-section>
               <q-item-section>Twitter</q-item-section>
             </q-item>
-          </div>
 
+            <q-separator/>
+
+            <router-link to="/lore" v-if="isUnder920px">
+              <q-item v-ripple>
+                  <q-item-section avatar>
+                    <q-avatar square>
+                      <img src="@/assets/footer/documents.png">
+                    </q-avatar>
+                  </q-item-section>
+                  <q-item-section>Home</q-item-section>
+              </q-item>
+            </router-link>
+
+            <q-separator/>
+
+            <router-link to="/planning" v-if="isUnder920px">
+              <q-item v-ripple>
+                <q-item-section avatar>
+                  <q-avatar square>
+                    <img src="@/assets/footer/computer.png">
+                  </q-avatar>
+                </q-item-section>
+                <q-item-section>Planning</q-item-section>
+              </q-item>
+            </router-link>
+
+            <q-separator/>
+
+            <router-link to="/blog" v-if="isUnder920px">
+              <q-item v-ripple>
+                <q-item-section avatar>
+                  <q-avatar square>
+                    <img src="@/assets/footer/network.png">
+                  </q-avatar>
+                </q-item-section>
+                <q-item-section>Blog</q-item-section>
+              </q-item>
+            </router-link>
+
+            <q-separator/>
+
+            <router-link to="/cmd" v-if="isUnder920px">
+              <q-item v-ripple>
+                <q-item-section avatar>
+                  <q-avatar square>
+                    <img src="@/assets/footer/console_prompt-0.png">
+                  </q-avatar>
+                </q-item-section>
+                <q-item-section>cmd</q-item-section>
+              </q-item>
+            </router-link>
+
+            <q-separator/>
+
+            <router-link to="/" v-if="isUnder920px">
+              <q-item v-ripple>
+                <q-item-section avatar>
+                  <q-avatar square>
+                    <img src="@/assets/footer/log_out.png">
+                  </q-avatar>
+                </q-item-section>
+                <q-item-section>Se déconnecter</q-item-section>
+              </q-item>
+            </router-link>
+
+          </div>
         </q-list>
 
-      <div id="logoff" @click="customRoute('/')">
+      <div id="logoff" @click="customRoute('/')" v-if="!isUnder920px">
         <router-link to="/">
             <q-item>
               <q-item-section avatar>

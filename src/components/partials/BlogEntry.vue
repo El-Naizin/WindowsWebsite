@@ -28,8 +28,8 @@ export default {
 
 <template>
   <tr id="blog-entry"
-      @click="updateSelectedEntry(entryName)" :class="{entryselected: entryName === selectedEntry}"
-      @dblclick="$router.push(`/blog/${entryName.slice(0, -3)}`)"
+      @mousedown="updateSelectedEntry(entryName)" :class="{entryselected: entryName === selectedEntry}"
+      @click="$router.push(`/blog/${entryName.slice(0, -3)}`)"
   >
     <th class="blog-entry-name">
       <img src="@/assets/footer/file.png">

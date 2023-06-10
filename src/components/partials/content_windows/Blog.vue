@@ -122,7 +122,6 @@ table {
   border-spacing: 0;
   border-collapse: collapse;
   margin: auto; /* Add auto margin to center the table horizontally */
-  font-size: 20px;
 }
 
 </style>
