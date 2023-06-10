@@ -26,8 +26,6 @@ export default {
     return {
       popup: false,
 
-      priority: 0,
-
       positions: {
         clientX: undefined,
         clientY: undefined,
@@ -51,7 +49,6 @@ export default {
       // get the mouse cursor position at startup:
       this.positions.clientX = event.clientX
       this.positions.clientY = event.clientY
-      this.priority = 2
       document.onmousemove = this.elementDrag
       document.onmouseup = this.closeDragElement
     },
@@ -68,7 +65,6 @@ export default {
     closeDragElement () {
       document.onmouseup = null
       document.onmousemove = null
-      this.priority = 0
     }
   }
 }
