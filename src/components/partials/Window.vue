@@ -84,8 +84,8 @@ export default {
 .window {
   max-width: 95%;
   max-height: 95%;
-  min-width: 50%;
-  min-height: 30%;
+  min-width: 20%;
+  min-height: 15%;
   display: flex;
   flex-direction: column;
   position: absolute;

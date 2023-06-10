@@ -86,10 +86,26 @@ export default {
   <Window title="Planning" help_btn help_popup="" minimize_btn>
     <q-splitter
         :model-value=NaN
-        style="height: 510px"
+        horizontal
     >
 
       <template v-slot:before>
+
+        <q-tab-panels
+            v-model="planning_date"
+            class="basePannel"
+
+        >
+          <q-tab-panel class="singularPannel" v-for="(item, index) in items" :name="item.EventDate">
+            <div class="text-h4 q-mb-md">{{item.EventDate}}<br></div>
+            <div> <p>{{ item.Content }}</p> </div>
+          </q-tab-panel>
+
+        </q-tab-panels>
+
+      </template>
+
+      <template v-slot:after>
         <div class="q-pa-md">
           <q-date
               v-model="planning_date"
@@ -101,22 +117,6 @@ export default {
         </div>
       </template>
 
-      <template v-slot:after>
-
-        <q-tab-panels
-            v-model="planning_date"
-            class="basePannel"
-
-        >
-          <q-tab-panel class="singularPannel" v-for="(item, index) in items" :name="item.EventDate">
-            <div class="text-h4 q-mb-md">{{item.EventDate}}</div>
-            <p>{{ item.Content }}</p>
-          </q-tab-panel>
-
-        </q-tab-panels>
-
-      </template>
-
     </q-splitter>
 
 
@@ -124,7 +124,7 @@ export default {
 </template>
 <style>
 .q-date button {
-  min-width: 0;
+  min-width: unset;
 }
 </style>
 
@@ -136,13 +136,17 @@ export default {
   height: 100%;
   overflow-wrap: break-word;
   overflow: hidden;
-  //max-width: 300px;
 }
 
 .singularPannel {
-  height: 450px;
+  display: flex;
+  flex-direction: column; /* Set the flex direction to column */
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow-wrap: break-word;
+  overflow: hidden;
 }
-
 
 .q-pa-md {
   display: flex;
