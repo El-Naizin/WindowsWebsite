@@ -8,7 +8,9 @@ export default {
   data() {
     return{
       userInput : "",
-      showMessage : false,
+      showErrorMessage : false,
+      showSuccesMessage : false,
+      isInputEnable : true,
       timeoutId: null,
     }
   },
@@ -21,14 +23,25 @@ export default {
       this.$refs.inputRef.focus();
     },
     checkInput() {
+
+      if(this.showSuccesMessage)
+        return;
+
       if (this.timeoutId) {
         clearTimeout(this.timeoutId);
       }
 
-      this.showMessage = true;
+      if(this.userInput == "Ackow"){
+        this.showSuccesMessage = true;
+        this.isInputEnable = false;
+        this.showErrorMessage = false;
+        return;
+      }
+
+      this.showErrorMessage = true;
 
       this.timeoutId = setTimeout(() => {
-        this.showMessage = false;
+        this.showErrorMessage = false;
       }, 3000);
 
       this.userInput = "";
@@ -45,9 +58,16 @@ export default {
           <br></pre>
 
       <div class="inputWrapper">
-        <pre>C:&#92;WINDOWS&#92;SYSTEM32></pre><input class="inputUser" type="text" ref="inputRef" v-model="userInput">
+        <pre>C:&#92;WINDOWS&#92;SYSTEM32></pre><input v-if="isInputEnable" class="inputUser" type="text" ref="inputRef" v-model="userInput">
       </div>
-      <pre><p v-if="showMessage">Wrong Password</p></pre>
+      <pre><p v-if="showErrorMessage">Wrong Password</p></pre>
+      <pre v-if="showSuccesMessage"><p>
+Félicitations !
+Vous avez résolu l'énigme d'Ackow avec brio.
+Pour poursuivre votre progression "".
+Nous vous invitons à envoyer un email à l'adresse suivante :</p>
+<a href="mailto:Ackow@protonmail.com">Ackow@protonmail.com</a>
+      </pre>
     </div>
   </Window>
 </template>
