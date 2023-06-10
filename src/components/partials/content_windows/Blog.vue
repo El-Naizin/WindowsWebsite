@@ -118,10 +118,11 @@ th {
 
 table {
   width: 100%;
-  max-width: 600px;
+  max-width: 800px; /* Increase the max-width to make the table wider */
   border-spacing: 0;
-  //border: solid 1px black;
   border-collapse: collapse;
+  margin: auto; /* Add auto margin to center the table horizontally */
+  font-size: 20px;
 }
 
 </style>
