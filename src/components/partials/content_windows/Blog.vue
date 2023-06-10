@@ -79,7 +79,6 @@ export default {
       </tr>
       </thead>
       <tbody>
-<!--      TODO change background color to match the window-->
       <BlogEntry :entryName="item.md_filename"
                  :entryDateAdded="item.creation_date"
                  :entryTags="item.tags.join(' ')"

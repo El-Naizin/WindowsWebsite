@@ -27,7 +27,7 @@ export default {
 </script>
 
 <template>
-  <tr
+  <tr id="blog-entry"
       @click="updateSelectedEntry(entryName)" :class="{entryselected: entryName === selectedEntry}"
       @dblclick="$router.push(`/blog/${entryName.slice(0, -3)}`)"
   >
@@ -45,12 +45,8 @@ export default {
 </template>
 
 <style scoped>
-.blog-entry {
-  display: flex;
-}
-
 th {
-  background-color: #f0f0f0;
+  background-color: #ece9d8;
   text-align: left;
 }
 
@@ -59,7 +55,7 @@ th {
 }
 
 tr {
-  background-color: #f8f8f8;
+  background-color: #ece9d8;
   user-select: none;
   cursor: pointer;
 }
@@ -68,7 +64,6 @@ tr {
   background-color: #e0e0e0;
   border: 1px dashed #1D1D1D;
 }
-
 
 img {
   height: 1em;
