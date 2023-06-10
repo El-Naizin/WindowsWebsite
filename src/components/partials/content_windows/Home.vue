@@ -14,7 +14,7 @@ export default {
   methods: {
     clickLogin() {
       if (this.login === 'Ackow_' && this.password === 'P1r@te') {
-        this.$router.push('/lore')
+        this.$router.push('/~khimayan/lore')
       }
     },
   }

@@ -28,7 +28,7 @@ export default {
   methods: {
     async getMarkdown() {
 
-      await fetch('/Markdown_Entries/index.json')
+      await fetch('/~khimayan/Markdown_Entries/index.json')
           .then(response => response.json())
           .then(json => jsonData = json);
 
@@ -37,7 +37,7 @@ export default {
       let md_content = [];
 
       for (let item in jsonData.Entries) {
-        const fetchPromise = fetch('/Markdown_Entries/' + jsonData.Entries[item].md_filename)
+        const fetchPromise = fetch('/~khimayan/Markdown_Entries/' + jsonData.Entries[item].md_filename)
             .then(response => response.text())
             .then(text => md_content.push(text))
 
@@ -55,7 +55,7 @@ export default {
     async getMarkdownEntries() {
       let markdownData = {};
 
-      const fetchPromise = await fetch('/Markdown_Entries/index.json')
+      const fetchPromise = await fetch('/~khimayan/Markdown_Entries/index.json')
           .then(response => response.json())
           .then(json => markdownData = json);
 

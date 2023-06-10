@@ -15,7 +15,7 @@ export default {
     getRenderedMarkdown() {
       const md = new MarkdownIt();
 
-       fetch('/Markdown_Entries/' + this.$route.params.entry + ".md")
+       fetch('/~khimayan/Markdown_Entries/' + this.$route.params.entry + ".md")
           .then(response => response.text())
           .then(text => this.md_content = text);
 

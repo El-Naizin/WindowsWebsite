@@ -4,9 +4,9 @@
       <div class="title-bar-text">{{ title }}</div>
       <div class="title-bar-controls">
         <button aria-label="Help" @click="popup = !popup" v-if="help_btn"></button>
-        <button aria-label="Minimize" @click="$router.push('/wallpaper')" v-if="minimize_btn"></button>
+        <button aria-label="Minimize" @click="$router.push('/~khimayan/wallpaper')" v-if="minimize_btn"></button>
         <button aria-label="Restore" v-if="restore_btn"></button>
-        <button aria-label="Close" @click="$router.push('/blog')" v-if="close_btn"></button>
+        <button aria-label="Close" @click="$router.push('/~khimayan/blog')" v-if="close_btn"></button>
       </div>
     </div>
     <div class="window-body">

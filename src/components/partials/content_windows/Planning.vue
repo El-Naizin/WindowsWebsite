@@ -28,7 +28,7 @@ export default {
 
     let JsonData = {};
 
-    fetch('/calendar_index.json')
+    fetch('/~khimayan/calendar_index.json')
       .then(response => response.json())
       .then(json => {
         JsonData = json;
@@ -58,7 +58,7 @@ export default {
     async getEventEntries() {
       let JsonData = {};
 
-      const fetchPromise = await fetch('/calendar_index.json')
+      const fetchPromise = await fetch('/~khimayan/calendar_index.json')
           .then(response => response.json())
           .then(json => {
             JsonData = json;

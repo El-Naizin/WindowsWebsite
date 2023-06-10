@@ -10,14 +10,14 @@ import NotFound from "@/components/partials/content_windows/NotFound.vue";
 import CommandLine from "@/components/partials/content_windows/CommandLine.vue";
 
 const routes = [
-    {path: '/', name: 'Home', component: Home},
-    {path: '/planning', name: 'Planning', component: Planning},
-    {path: '/blog', name: 'Blog', component: Blog},
-    {path: '/lore', name: 'Lore', component: Lore},
-    {path: '/blog/:entry', name: 'ProcessedBlog', component: ProcessedBlog},
-    {path: '/wallpaper', name: 'Wallpaper', component: Wallpaper},
-    {path: '/cmd', name: 'CMD', component: CommandLine},
-    {path: '/:notFound', name: 'NotFound', component: NotFound}
+    {path: '/~khimayan/', name: 'Home', component: Home},
+    {path: '/~khimayan/planning', name: 'Planning', component: Planning},
+    {path: '/~khimayan/blog', name: 'Blog', component: Blog},
+    {path: '/~khimayan/lore', name: 'Lore', component: Lore},
+    {path: '/~khimayan/blog/:entry', name: 'ProcessedBlog', component: ProcessedBlog},
+    {path: '/~khimayan/wallpaper', name: 'Wallpaper', component: Wallpaper},
+    {path: '/~khimayan/cmd', name: 'CMD', component: CommandLine},
+    {path: '/~khimayan/:notFound', name: 'NotFound', component: NotFound}
 ]
 
 const router = createRouter({

@@ -30,7 +30,7 @@ export default {
     },
     customRoute(newRoute) {
       if (newRoute === this.$route.path) {
-        this.$router.push('/wallpaper')
+        this.$router.push('/~khimayan/wallpaper')
       } else {
         this.$router.push(newRoute)
       }
@@ -57,14 +57,14 @@ export default {
     </div>
 
     <div class="opened-tabs">
-      <div class="taskbar-tab unselectable" :class="{active: isTabOpened('/lore')}" @click="customRoute('/lore')"><img src="../../assets/footer/documents.png"> Home
+      <div class="taskbar-tab unselectable" :class="{active: isTabOpened('/~khimayan/lore')}" @click="customRoute('/~khimayan/lore')"><img src="../../assets/footer/documents.png"> Home
       </div>
-      <div class="taskbar-tab unselectable" :class="{active: isTabOpened('/planning')}" @click="customRoute('/planning')"><img src="../../assets/footer/computer.png">
+      <div class="taskbar-tab unselectable" :class="{active: isTabOpened('/~khimayan/planning')}" @click="customRoute('/~khimayan/planning')"><img src="../../assets/footer/computer.png">
         Planning
       </div>
-      <div class="taskbar-tab unselectable" :class="{active: isTabOpened('/blog')}" @click="customRoute('/blog')"><img src="../../assets/footer/network.png">Blog
+      <div class="taskbar-tab unselectable" :class="{active: isTabOpened('/~khimayan/blog')}" @click="customRoute('/~khimayan/blog')"><img src="../../assets/footer/network.png">Blog
       </div>
-      <div class="taskbar-tab unselectable" :class="{active: isTabOpened('/cmd')}" @click="customRoute('/cmd')"><img src="../../assets/footer/console_prompt-0.png">cmd
+      <div class="taskbar-tab unselectable" :class="{active: isTabOpened('/~khimayan/cmd')}" @click="customRoute('/~khimayan/cmd')"><img src="../../assets/footer/console_prompt-0.png">cmd
       </div>
     </div>
 

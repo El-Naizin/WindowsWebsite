@@ -16,7 +16,7 @@ export default {
     getRenderedMarkdown() {
       const md = new MarkdownIt();
 
-      fetch('/lore/ackow.txt')
+      fetch('/~khimayan/lore/ackow.txt')
           .then(response => response.text())
           .then(text => this.md_content = text);
 

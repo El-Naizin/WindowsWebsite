@@ -8,17 +8,17 @@ import { useRoute } from 'vue-router'
 export default {
   data() {
     return {
-      last_bg: 'a.png',
+      last_bg: '/~khimayan/backgrounds/a.png',
       images: ["a.png", "b.png", "c.png"],
     };
   },
   methods: {
     randomBackground() {
-      if (useRoute().path !== '/') {
+      if (useRoute().path !== '/~khimayan/') {
         return this.last_bg;
       }
       else {
-        this.last_bg = `/backgrounds/${this.images[Math.floor(Math.random() * this.images.length)]}`;
+        this.last_bg = `/~khimayan/backgrounds/${this.images[Math.floor(Math.random() * this.images.length)]}`;
         return this.last_bg;
       }
     },
