@@ -1,5 +1,5 @@
 <template>
-  <div class="window" ref="draggableContainer" :style="{zIndex : priority}">
+  <div class="window" ref="draggableContainer">
     <div class="title-bar" @mousedown="dragMouseDown">
       <div class="title-bar-text">{{ title }}</div>
       <div class="title-bar-controls">
