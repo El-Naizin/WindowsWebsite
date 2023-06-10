@@ -22,19 +22,20 @@ export default {
 </script>
 
 <template>
-  <Window title="Ouverture de session Windows">
-    <div class="field-row">
-      <label for="text">Nom d'utilisateur :</label>
-      <input id="text" v-model="login" type="text"/>
-    </div>
-    <div class="field-row">
-      <label for="text1">Mot de passe :</label>
-      <input id="text1" v-model="password" type="password"/>
-    </div>
-    <div id="btn_login">
-      <button class="btn_ok" @click="clickLogin">Login</button>
-    </div>
-  </Window>
+    <Window title="Ouverture de session">
+      <div class="field-row">
+        <label for="text">Nom d'utilisateur :</label>
+        <input id="text" v-model="login" type="text"/>
+      </div>
+      <div class="field-row">
+        <label for="text1">Mot de passe :</label>
+        <input id="text1" v-model="password" type="password"/>
+      </div>
+      <div id="btn_login">
+        <button class="btn_ok" @click="clickLogin">Login</button>
+      </div>
+    </Window>
+
 </template>
 
 
