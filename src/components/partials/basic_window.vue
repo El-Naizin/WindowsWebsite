@@ -4,7 +4,7 @@ import Window from './Window.vue'
 
 <template>
   <div class="window">
-    <Window title="FAT 128 LIFE" help_btn help_popup="Ceci est une popup pour guider l'utilisateur">
+    <Window title="FAT 128 LIFE"  help_popup="Ceci est une popup pour guider l'utilisateur">
       <p>Mate moi ça, une fenêtre Windows XP quoi !</p>
       <p>Quoicoubeh eheh</p>
       <div>
