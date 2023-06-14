@@ -125,7 +125,7 @@ export default {
 
             <q-separator/>
 
-            <router-link to="/" v-if="isUnder920px">
+            <router-link to="/home" v-if="isUnder920px">
               <q-item v-ripple>
                 <q-item-section avatar>
                   <q-avatar square>
@@ -139,8 +139,8 @@ export default {
           </div>
         </q-list>
 
-      <div id="logoff" @click="customRoute('/')" v-if="!isUnder920px">
-        <router-link to="/">
+      <div id="logoff" @click="customRoute('/home')" v-if="!isUnder920px">
+        <router-link to="/home">
             <q-item>
               <q-item-section avatar>
                 <q-avatar square>

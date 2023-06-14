@@ -33,7 +33,7 @@ export default {
       <MainWindow></MainWindow>
     </div>
 
-    <div class="footer" v-show="useRoute().path !== '/'">
+    <div class="footer" v-show="useRoute().path !== '/' && useRoute().path !== '/home'">
       <FooterItem>
       </FooterItem>
     </div>
