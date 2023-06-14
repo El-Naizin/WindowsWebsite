@@ -139,7 +139,7 @@ export default {
           </div>
         </q-list>
 
-      <div id="logoff" @click="customRoute('/home')" v-if="!isUnder920px">
+      <div id="logoff" v-if="!isUnder920px">
         <router-link to="/home">
             <q-item>
               <q-item-section avatar>
