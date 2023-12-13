@@ -1,37 +1,26 @@
 # Site Ackow
 
+This website is a project simulating a windows operating system. It was created
+to develop a Twitch streamer.
+
 ## Running the project
 
-## TODO
-- Create quick paper mocks to align vision
-- Seperate tasks with post-its
-- Estimate time taken by each major task
-- Start coding with scrum: TODO / DOING / DONE
+```
+npm install
+npm run
+```
 
-## TaskList
-- Windows xp styling
-  - Integrate Windows xp styling for each element
-  - If Windows xp styling doesn't exist for a certain element,
-  try Internet Explorer or improvise
+## Screen captures
 
-- Windows taskbar
-  - Start menu
-    - Information about Ackow (account info part)
-    - Link to social medias
-    - Other way to access windows, not necessary
-  - Taskbar Clock
-  - Taskbar fun widget
-  - Taskbar normal windows
-    - Access blog window
-    - Access planning window
-    - Access livestream window
-- Blog window
-  - Markdown compilation
-- Planning window
-  - Simple html window, raw data, no need to modify code
-- Livestream window
-  - Twitch livestream integration
-  - Try to keep the theme
+![Login screen](site_captures/LoginPage.jpeg)
 
-- Special app
-  - Solitaire game won effect
+The home page gives information on the streamer
+![Home page](site_captures/Home.jpeg)
+
+In the planning window, users can see the streamer's next events.
+![Planning](site_captures/Planning.jpeg)
+
+The streamer can make blog posts in markdown format, with a custom font added
+in accordance to the streamer's lore.
+![Blog post list](site_captures/BlogList.jpeg)
+![Blog post](site_captures/BlogPost.jpeg)
